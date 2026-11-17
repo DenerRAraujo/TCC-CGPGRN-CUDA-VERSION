@@ -1,0 +1,37 @@
+16/11/2026 21:02:31 - Starting Log for mDC - 500cells
+16/11/2026 21:02:31 - Message: Start verification of arguments...
+16/11/2026 21:02:31 - Message: Verification of arguments sucessfully done.
+16/11/2026 21:02:31 - Message: Starting spline step...
+16/11/2026 21:02:31 - Message: Generating spline file...
+16/11/2026 21:02:39 - Elapsed time: 1.900007191579789e-07s
+16/11/2026 21:02:39 - Message: End of spline step.
+16/11/2026 21:02:39 - Message: Processing spline data...
+16/11/2026 21:02:39 - Message: Current pseudotime pt0
+16/11/2026 21:02:39 - Message: Starting clustering step for pseudotime pt0
+16/11/2026 21:02:39 - Message: Starting KMeans Clustering...
+16/11/2026 21:02:39 - Message: Calculating the best number of clusters...
+16/11/2026 21:02:39 - Info: Best number of clusters: 2
+16/11/2026 21:02:39 - Message: Predicting the labels for n_clusters = 2
+16/11/2026 21:02:39 - Message: Generating files for cluster 0
+16/11/2026 21:02:39 - Message: Generating files for cluster 1
+16/11/2026 21:02:40 - Message: KMeans successfully performed.
+16/11/2026 21:02:40 - Message: End clustering step for pseudotime pt0
+16/11/2026 21:02:40 - Elapsed time: 1.6368099290011742s
+16/11/2026 21:02:40 - Message: Discretizing data using BiKMeans for pseudotime pt0
+16/11/2026 21:02:40 - Message: Using not full discretization...
+16/11/2026 21:02:41 - Message: Discretizing data for cluster 0
+16/11/2026 21:02:41 - Message: Discretizing data for cluster 1
+16/11/2026 21:02:41 - Message: Data discretization sucessfully performed.
+16/11/2026 21:02:41 - Elapsed time: 0.7382102840001608s
+16/11/2026 21:02:41 - Message: Generating truth tables...
+16/11/2026 21:02:41 - Message: Generating truth tables for directory 1/2
+16/11/2026 21:02:41 - Message: Using one output per gene...
+16/11/2026 21:02:41 - Elapsed time: 0.02300479999939853s
+16/11/2026 21:02:41 - Message: Generating truth tables for directory 2/2
+16/11/2026 21:02:41 - Message: Using one output per gene...
+16/11/2026 21:02:41 - Elapsed time: 0.04058247399916581s
+16/11/2026 21:02:41 - Message: Generating bash scripts...
+16/11/2026 21:02:41 - Message: Bash scripts sucessfully generated.
+16/11/2026 21:02:41 - Elapsed time: 0.002473522999935085s
+16/11/2026 21:02:41 - End Log for mDC - 500cells
+16/11/2026 21:02:41 - Total elapsed time: 10.487840971998594s

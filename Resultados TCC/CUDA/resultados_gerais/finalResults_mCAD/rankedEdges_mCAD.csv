@@ -1,0 +1,14 @@
+Gene1	Gene2	EdgeWeight
+Fgf8	Fgf8	1.0
+Pax6	Fgf8	1.0
+Sp8	Fgf8	1.0
+Fgf8	Pax6	1.0
+Pax6	Pax6	1.0
+Sp8	Pax6	1.0
+Fgf8	Sp8	1.0
+Pax6	Sp8	1.0
+Sp8	Sp8	1.0
+Coup	Coup	1.0
+Emx2	Coup	1.0
+Coup	Emx2	1.0
+Emx2	Emx2	1.0

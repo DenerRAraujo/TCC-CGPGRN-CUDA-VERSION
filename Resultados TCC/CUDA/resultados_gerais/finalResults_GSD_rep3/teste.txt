@@ -1,0 +1,8 @@
+teste: 3 de 6
+repeticao: 3 de 3
+expressao: /home/Dener_Araujo/Downloads/tese-main/TCC Claude/TCC Claude/Bases Cuda/03_GSD_ExpressionData.csv
+pseudotempo: /home/Dener_Araujo/Downloads/tese-main/TCC Claude/TCC Claude/Bases Cuda/03_GSD_PseudoTime.csv
+comando: python CGPGRN.py -e ExpressionData.csv -p PseudoTime.csv -cm KMeans -nc 10 -pn GSD -s 500cells -d BiKMeans -r 5 -run
+inicio: 2026-11-16 19:39:19
+duracao: 00h32m02s
+status: OK

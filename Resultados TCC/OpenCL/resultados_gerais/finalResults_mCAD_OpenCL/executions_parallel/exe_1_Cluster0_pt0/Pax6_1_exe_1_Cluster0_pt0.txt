@@ -1,0 +1,36 @@
+Node3 0 2 16
+Node4 2 0 16
+Node35 4 3 14
+Output 35
+
+
+Node4 0 1 14
+Node8 1 4 14
+Node10 2 1 11
+Node14 1 8 12
+Node15 14 10 10
+Output 15
+
+
+Node4 2 0 15
+Node5 4 1 16
+Node17 0 5 16
+Node20 5 17 12
+Node49 20 2 17
+Output 49
+
+
+Node3 2 1 16
+Node46 3 0 17
+Output 46
+
+
+Node3 2 1 11
+Node8 3 1 17
+Node12 3 0 11
+Node24 2 8 14
+Node145 24 8 16
+Node146 12 145 11
+Output 146
+
+

@@ -1,0 +1,62 @@
+16/11/2026 18:31:07 - Starting Log for mCAD - 500cells
+16/11/2026 18:31:07 - Message: Start verification of arguments...
+16/11/2026 18:31:07 - Message: Verification of arguments sucessfully done.
+16/11/2026 18:31:07 - Message: Starting spline step...
+16/11/2026 18:31:07 - Message: Generating spline file...
+16/11/2026 18:31:10 - Elapsed time: 3.50000846083276e-07s
+16/11/2026 18:31:10 - Message: End of spline step.
+16/11/2026 18:31:10 - Message: Processing spline data...
+16/11/2026 18:31:10 - Message: Current pseudotime pt0
+16/11/2026 18:31:10 - Message: Starting clustering step for pseudotime pt0
+16/11/2026 18:31:10 - Message: Starting KMeans Clustering...
+16/11/2026 18:31:10 - Message: Calculating the best number of clusters...
+16/11/2026 18:31:10 - Info: Best number of clusters: 2
+16/11/2026 18:31:10 - Message: Predicting the labels for n_clusters = 2
+16/11/2026 18:31:10 - Message: Generating files for cluster 0
+16/11/2026 18:31:10 - Message: Generating files for cluster 1
+16/11/2026 18:31:10 - Message: KMeans successfully performed.
+16/11/2026 18:31:10 - Message: End clustering step for pseudotime pt0
+16/11/2026 18:31:10 - Elapsed time: 0.06626339000104053s
+16/11/2026 18:31:10 - Message: Discretizing data using BiKMeans for pseudotime pt0
+16/11/2026 18:31:10 - Message: Using not full discretization...
+16/11/2026 18:31:10 - Message: Discretizing data for cluster 0
+16/11/2026 18:31:10 - Message: Discretizing data for cluster 1
+16/11/2026 18:31:10 - Message: Data discretization sucessfully performed.
+16/11/2026 18:31:10 - Elapsed time: 0.3070628370005579s
+16/11/2026 18:31:10 - Message: Generating truth tables...
+16/11/2026 18:31:10 - Message: Generating truth tables for directory 1/2
+16/11/2026 18:31:10 - Message: Using one output per gene...
+16/11/2026 18:31:10 - Elapsed time: 0.007582281999930274s
+16/11/2026 18:31:10 - Message: Generating truth tables for directory 2/2
+16/11/2026 18:31:10 - Message: Using one output per gene...
+16/11/2026 18:31:10 - Elapsed time: 0.007680416001676349s
+16/11/2026 18:31:10 - Message: Generating bash scripts...
+16/11/2026 18:31:10 - Message: Current pseudotime pt1
+16/11/2026 18:31:10 - Message: Starting clustering step for pseudotime pt1
+16/11/2026 18:31:10 - Message: Starting KMeans Clustering...
+16/11/2026 18:31:10 - Message: Calculating the best number of clusters...
+16/11/2026 18:31:10 - Info: Best number of clusters: 2
+16/11/2026 18:31:10 - Message: Predicting the labels for n_clusters = 2
+16/11/2026 18:31:10 - Message: Generating files for cluster 0
+16/11/2026 18:31:10 - Message: Generating files for cluster 1
+16/11/2026 18:31:10 - Message: KMeans successfully performed.
+16/11/2026 18:31:10 - Message: End clustering step for pseudotime pt1
+16/11/2026 18:31:10 - Elapsed time: 0.0402504029989359s
+16/11/2026 18:31:10 - Message: Discretizing data using BiKMeans for pseudotime pt1
+16/11/2026 18:31:10 - Message: Using not full discretization...
+16/11/2026 18:31:11 - Message: Discretizing data for cluster 0
+16/11/2026 18:31:11 - Message: Discretizing data for cluster 1
+16/11/2026 18:31:11 - Message: Data discretization sucessfully performed.
+16/11/2026 18:31:11 - Elapsed time: 0.27415239199945063s
+16/11/2026 18:31:11 - Message: Generating truth tables...
+16/11/2026 18:31:11 - Message: Generating truth tables for directory 1/2
+16/11/2026 18:31:11 - Message: Using one output per gene...
+16/11/2026 18:31:11 - Elapsed time: 0.006147713000245858s
+16/11/2026 18:31:11 - Message: Generating truth tables for directory 2/2
+16/11/2026 18:31:11 - Message: Using one output per gene...
+16/11/2026 18:31:11 - Elapsed time: 0.0060703279996232595s
+16/11/2026 18:31:11 - Message: Generating bash scripts...
+16/11/2026 18:31:11 - Message: Bash scripts sucessfully generated.
+16/11/2026 18:31:11 - Elapsed time: 0.0016405050009780098s
+16/11/2026 18:31:11 - End Log for mCAD - 500cells
+16/11/2026 18:31:11 - Total elapsed time: 3.329620866001278s

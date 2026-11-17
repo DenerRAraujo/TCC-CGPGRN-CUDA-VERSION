@@ -1,0 +1,7 @@
+# Texto do TCC (LaTeX e bibliografia) não é versionado
+TCC/
+/tcc.tex
+
+# Python
+__pycache__/
+*.pyc

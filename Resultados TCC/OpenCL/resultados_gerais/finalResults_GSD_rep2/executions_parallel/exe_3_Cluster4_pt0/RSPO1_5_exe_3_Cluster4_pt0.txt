@@ -1,0 +1,21 @@
+Node3 0 1 12
+Output 3
+
+
+Node2 1 0 12
+Output 2
+
+
+Node2 1 1 12
+Output 2
+
+
+Node3 1 0 11
+Output 3
+
+
+Node6 1 1 10
+Node8 6 6 12
+Output 8
+
+

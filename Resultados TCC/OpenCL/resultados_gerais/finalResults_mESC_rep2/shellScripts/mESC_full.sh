@@ -1,0 +1,22 @@
+python3 include/makeFile.py -o 1 -n 500 -e 50000
+bash mESC_exe_1_Cluster0_pt0.sh;
+bash mESC_exe_2_Cluster0_pt0.sh;
+bash mESC_exe_3_Cluster0_pt0.sh;
+bash mESC_exe_4_Cluster0_pt0.sh;
+bash mESC_exe_5_Cluster0_pt0.sh;
+bash mESC_exe_1_Cluster1_pt0.sh;
+bash mESC_exe_2_Cluster1_pt0.sh;
+bash mESC_exe_3_Cluster1_pt0.sh;
+bash mESC_exe_4_Cluster1_pt0.sh;
+bash mESC_exe_5_Cluster1_pt0.sh;
+bash mESC_exe_1_Cluster2_pt0.sh;
+bash mESC_exe_2_Cluster2_pt0.sh;
+bash mESC_exe_3_Cluster2_pt0.sh;
+bash mESC_exe_4_Cluster2_pt0.sh;
+bash mESC_exe_5_Cluster2_pt0.sh;
+bash mESC_exe_1_Cluster3_pt0.sh;
+bash mESC_exe_2_Cluster3_pt0.sh;
+bash mESC_exe_3_Cluster3_pt0.sh;
+bash mESC_exe_4_Cluster3_pt0.sh;
+bash mESC_exe_5_Cluster3_pt0.sh;
+python3 include/postProcess.py

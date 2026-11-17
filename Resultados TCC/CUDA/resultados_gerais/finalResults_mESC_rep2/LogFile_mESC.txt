@@ -1,0 +1,47 @@
+16/11/2026 18:39:38 - Starting Log for mESC - 500cells
+16/11/2026 18:39:38 - Message: Start verification of arguments...
+16/11/2026 18:39:38 - Message: Verification of arguments sucessfully done.
+16/11/2026 18:39:38 - Message: Starting spline step...
+16/11/2026 18:39:38 - Message: Generating spline file...
+16/11/2026 18:39:40 - Elapsed time: 2.2099993657320738e-07s
+16/11/2026 18:39:40 - Message: End of spline step.
+16/11/2026 18:39:40 - Message: Processing spline data...
+16/11/2026 18:39:40 - Message: Current pseudotime pt0
+16/11/2026 18:39:40 - Message: Starting clustering step for pseudotime pt0
+16/11/2026 18:39:40 - Message: Starting KMeans Clustering...
+16/11/2026 18:39:40 - Message: Calculating the best number of clusters...
+16/11/2026 18:39:40 - Info: Best number of clusters: 4
+16/11/2026 18:39:40 - Message: Predicting the labels for n_clusters = 4
+16/11/2026 18:39:40 - Message: Generating files for cluster 0
+16/11/2026 18:39:40 - Message: Generating files for cluster 1
+16/11/2026 18:39:40 - Message: Generating files for cluster 2
+16/11/2026 18:39:40 - Message: Generating files for cluster 3
+16/11/2026 18:39:40 - Message: KMeans successfully performed.
+16/11/2026 18:39:40 - Message: End clustering step for pseudotime pt0
+16/11/2026 18:39:40 - Elapsed time: 0.1336544829991908s
+16/11/2026 18:39:40 - Message: Discretizing data using BiKMeans for pseudotime pt0
+16/11/2026 18:39:40 - Message: Using not full discretization...
+16/11/2026 18:39:41 - Message: Discretizing data for cluster 0
+16/11/2026 18:39:41 - Message: Discretizing data for cluster 1
+16/11/2026 18:39:41 - Message: Discretizing data for cluster 2
+16/11/2026 18:39:41 - Message: Discretizing data for cluster 3
+16/11/2026 18:39:41 - Message: Data discretization sucessfully performed.
+16/11/2026 18:39:41 - Elapsed time: 0.3158660269982647s
+16/11/2026 18:39:41 - Message: Generating truth tables...
+16/11/2026 18:39:41 - Message: Generating truth tables for directory 1/4
+16/11/2026 18:39:41 - Message: Using one output per gene...
+16/11/2026 18:39:41 - Elapsed time: 0.009784349000256043s
+16/11/2026 18:39:41 - Message: Generating truth tables for directory 2/4
+16/11/2026 18:39:41 - Message: Using one output per gene...
+16/11/2026 18:39:41 - Elapsed time: 0.00742053800058784s
+16/11/2026 18:39:41 - Message: Generating truth tables for directory 3/4
+16/11/2026 18:39:41 - Message: Using one output per gene...
+16/11/2026 18:39:41 - Elapsed time: 0.006432546999349142s
+16/11/2026 18:39:41 - Message: Generating truth tables for directory 4/4
+16/11/2026 18:39:41 - Message: Using one output per gene...
+16/11/2026 18:39:41 - Elapsed time: 0.02371317600045586s
+16/11/2026 18:39:41 - Message: Generating bash scripts...
+16/11/2026 18:39:41 - Message: Bash scripts sucessfully generated.
+16/11/2026 18:39:41 - Elapsed time: 0.0031354260008811252s
+16/11/2026 18:39:41 - End Log for mESC - 500cells
+16/11/2026 18:39:41 - Total elapsed time: 2.5888116149999405s

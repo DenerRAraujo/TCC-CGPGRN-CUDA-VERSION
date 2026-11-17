@@ -1,0 +1,12 @@
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 mESC MIR669A-3 24 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 mESC VEGFA 25 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 mESC TCL1 26 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 mESC GRB10 27 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 mESC HSP25-PS1 28 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 mESC LEFTY2 29 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 mESC SPRY2 30 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 mESC BEX1 31 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 mESC SNORD49B 32 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 mESC MAN1A2 33 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 mESC PML 34 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 mESC P3H1 35 kmeans/Cluster0/truth_tables_pt0 0 

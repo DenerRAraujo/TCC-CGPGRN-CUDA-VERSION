@@ -1,0 +1,8 @@
+teste: 4 de 6
+repeticao: 1 de 1
+expressao: /home/Dener_Araujo/Downloads/tese-main/TCC Claude/TCC Claude/Bases Cuda/04_Ecoli-32_ExpressionData.csv
+pseudotempo: /home/Dener_Araujo/Downloads/tese-main/TCC Claude/TCC Claude/Bases Cuda/04_Ecoli-32_Pseudotime.csv
+comando: python CGPGRN.py -e ExpressionData.csv -p PseudoTime.csv -cm KMeans -nc 16 -pn Ecoli-32 -s 500cells -d BiKMeans -r 5 -run
+inicio: 2026-11-16 20:11:21
+duracao: 01h10m51s
+status: OK

@@ -1,0 +1,10 @@
+Number of files: 80
+timeName	Mean (s)	Total (s)
+timeIter	22.13	1770.44
+timeIterTotal	11.07	885.33
+timeKernel	0.74	59.02
+totalTime	11.26	900.6
+
+Pre-processing time: 2.5657302609997714s
+
+Total elapsed time for CGPGRN framework: 903.16s

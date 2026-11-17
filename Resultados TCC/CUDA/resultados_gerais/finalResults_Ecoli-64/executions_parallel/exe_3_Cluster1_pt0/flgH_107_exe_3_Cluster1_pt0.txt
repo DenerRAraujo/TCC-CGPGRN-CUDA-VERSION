@@ -1,0 +1,20 @@
+Node427 35 27 11
+Output 427
+
+
+Node50 39 42 10
+Output 50
+
+
+Node75 21 0 12
+Output 75
+
+
+Node119 36 28 10
+Output 119
+
+
+Node116 1 24 10
+Output 116
+
+

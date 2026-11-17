@@ -1,0 +1,8 @@
+teste: 2 de 6
+repeticao: 1 de 3
+expressao: /home/Dener/Downloads/TCC Claude/TCC Claude/Bases OpenCL/02_mESC_ExpressionData.csv
+pseudotempo: /home/Dener/Downloads/TCC Claude/TCC Claude/Bases OpenCL/02_mESC_PseudoTime.csv
+comando: python CGPGRN.py -e ExpressionData.csv -p PseudoTime.csv -cm KMeans -nc 8 -pn mESC -s 500cells -d BiKMeans -r 5 -run
+inicio: 2026-11-16 19:05:43
+duracao: 00h15m19s
+status: OK

@@ -1,0 +1,37 @@
+16/11/2026 21:22:13 - Starting Log for Ecoli-64 - 500cells
+16/11/2026 21:22:13 - Message: Start verification of arguments...
+16/11/2026 21:22:13 - Message: Verification of arguments sucessfully done.
+16/11/2026 21:22:13 - Message: Starting spline step...
+16/11/2026 21:22:13 - Message: Generating spline file...
+16/11/2026 21:22:17 - Elapsed time: 1.400003384333104e-07s
+16/11/2026 21:22:17 - Message: End of spline step.
+16/11/2026 21:22:17 - Message: Processing spline data...
+16/11/2026 21:22:17 - Message: Current pseudotime pt0
+16/11/2026 21:22:17 - Message: Starting clustering step for pseudotime pt0
+16/11/2026 21:22:17 - Message: Starting KMeans Clustering...
+16/11/2026 21:22:17 - Message: Calculating the best number of clusters...
+16/11/2026 21:22:17 - Info: Best number of clusters: 2
+16/11/2026 21:22:17 - Message: Predicting the labels for n_clusters = 2
+16/11/2026 21:22:17 - Message: Generating files for cluster 0
+16/11/2026 21:22:17 - Message: Generating files for cluster 1
+16/11/2026 21:22:17 - Message: KMeans successfully performed.
+16/11/2026 21:22:17 - Message: End clustering step for pseudotime pt0
+16/11/2026 21:22:17 - Elapsed time: 0.22538427100153058s
+16/11/2026 21:22:17 - Message: Discretizing data using BiKMeans for pseudotime pt0
+16/11/2026 21:22:17 - Message: Using not full discretization...
+16/11/2026 21:22:18 - Message: Discretizing data for cluster 0
+16/11/2026 21:22:18 - Message: Discretizing data for cluster 1
+16/11/2026 21:22:18 - Message: Data discretization sucessfully performed.
+16/11/2026 21:22:18 - Elapsed time: 0.18236699499902898s
+16/11/2026 21:22:18 - Message: Generating truth tables...
+16/11/2026 21:22:18 - Message: Generating truth tables for directory 1/2
+16/11/2026 21:22:18 - Message: Using one output per gene...
+16/11/2026 21:22:18 - Elapsed time: 0.002457128997775726s
+16/11/2026 21:22:18 - Message: Generating truth tables for directory 2/2
+16/11/2026 21:22:18 - Message: Using one output per gene...
+16/11/2026 21:22:18 - Elapsed time: 0.0042897860002995s
+16/11/2026 21:22:18 - Message: Generating bash scripts...
+16/11/2026 21:22:18 - Message: Bash scripts sucessfully generated.
+16/11/2026 21:22:18 - Elapsed time: 0.0020226540000294335s
+16/11/2026 21:22:18 - End Log for Ecoli-64 - 500cells
+16/11/2026 21:22:18 - Total elapsed time: 4.772598188999837s

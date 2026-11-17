@@ -1,0 +1,5 @@
+./progCUDA kmeans/Cluster0/geneNames_0_pt1.txt exe_4_Cluster0_pt1 GSD AMH 15 kmeans/Cluster0/truth_tables_pt1 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt1.txt exe_4_Cluster0_pt1 GSD DHH 16 kmeans/Cluster0/truth_tables_pt1 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt1.txt exe_4_Cluster0_pt1 GSD FGF9 17 kmeans/Cluster0/truth_tables_pt1 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt1.txt exe_4_Cluster0_pt1 GSD PGD2 18 kmeans/Cluster0/truth_tables_pt1 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt1.txt exe_4_Cluster0_pt1 GSD SOX9 19 kmeans/Cluster0/truth_tables_pt1 0 

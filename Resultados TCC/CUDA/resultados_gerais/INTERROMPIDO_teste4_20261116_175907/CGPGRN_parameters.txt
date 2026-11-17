@@ -1,0 +1,6 @@
+['/home/Dener_Araujo/Downloads/tese-main/cgpgrn-CUDA/cgpgrn-CUDA/kmeans/Cluster0BKM_Ecoli-32_0_pt0.csv', '/home/Dener_Araujo/Downloads/tese-main/cgpgrn-CUDA/cgpgrn-CUDA/kmeans/Cluster1BKM_Ecoli-32_1_pt0.csv']
+['/home/Dener_Araujo/Downloads/tese-main/cgpgrn-CUDA/cgpgrn-CUDA/kmeans/Cluster0/geneNames_0_pt0.txt', '/home/Dener_Araujo/Downloads/tese-main/cgpgrn-CUDA/cgpgrn-CUDA/kmeans/Cluster1/geneNames_1_pt0.txt']
+['/home/Dener_Araujo/Downloads/tese-main/cgpgrn-CUDA/cgpgrn-CUDA/kmeans/Cluster0', '/home/Dener_Araujo/Downloads/tese-main/cgpgrn-CUDA/cgpgrn-CUDA/kmeans/Cluster1']
+['exe_1_Cluster0_pt0', 'exe_2_Cluster0_pt0', 'exe_3_Cluster0_pt0', 'exe_4_Cluster0_pt0', 'exe_5_Cluster0_pt0', 'exe_1_Cluster1_pt0', 'exe_2_Cluster1_pt0', 'exe_3_Cluster1_pt0', 'exe_4_Cluster1_pt0', 'exe_5_Cluster1_pt0']
+Additional Discretization Files: []
+Namespace(clusterMethod='KMeans', n_clusters='16', correlation_threshold='None', expressionDataFile='ExpressionData.csv', pseudotimeFile='PseudoTime.csv', problemName='Ecoli-32', suffix='500cells', discretizationApproach='BiKMeans', independentRuns=5, fullDiscretization=False, argSplineFile='None', splineList=False, runCGP=True, keepData=False, fullTT=False, generateSplineList=False, cgpNodes='None', cgpGens='None', useCUDA=True)

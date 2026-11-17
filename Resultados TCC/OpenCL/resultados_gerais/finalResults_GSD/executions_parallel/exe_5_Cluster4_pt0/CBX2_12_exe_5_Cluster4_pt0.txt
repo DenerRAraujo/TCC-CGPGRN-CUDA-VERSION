@@ -1,0 +1,30 @@
+Node4 0 0 12
+Node10 2 1 14
+Node26 4 4 12
+Node65 10 26 14
+Output 65
+
+
+Node4 2 1 12
+Node10 4 1 10
+Node25 1 10 16
+Node44 25 10 17
+Output 44
+
+
+Node4 2 2 10
+Output 4
+
+
+Node4 0 0 15
+Node6 2 4 17
+Node18 4 2 14
+Node42 6 18 12
+Output 42
+
+
+Node3 1 2 10
+Node6 3 1 10
+Output 6
+
+

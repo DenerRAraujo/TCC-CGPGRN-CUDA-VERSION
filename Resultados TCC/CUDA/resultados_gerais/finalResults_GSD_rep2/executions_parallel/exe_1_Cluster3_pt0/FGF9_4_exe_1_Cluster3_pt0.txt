@@ -1,0 +1,62 @@
+Node7 0 1 16
+Node10 4 4 10
+Node12 7 10 16
+Node17 5 4 17
+Node18 17 12 14
+Node42 12 18 16
+Output 42
+
+
+Node8 1 6 11
+Node9 4 6 17
+Node10 0 0 11
+Node13 3 3 12
+Node14 5 13 10
+Node20 10 8 14
+Node23 20 14 16
+Node30 9 23 10
+Node35 30 6 16
+Node55 35 14 12
+Output 55
+
+
+Node8 2 1 16
+Node9 8 6 17
+Node11 0 4 12
+Node18 3 6 16
+Node27 11 3 16
+Node33 18 9 11
+Node91 9 33 15
+Node153 27 91 10
+Node160 18 153 14
+Node312 11 160 16
+Node505 312 312 11
+Output 505
+
+
+Node10 0 4 12
+Node21 10 6 16
+Output 21
+
+
+Node7 0 6 11
+Node8 3 5 14
+Node11 5 3 15
+Node20 7 0 12
+Node22 3 1 10
+Node26 20 20 10
+Node31 22 26 10
+Node36 4 11 11
+Node43 7 6 16
+Node51 2 0 17
+Node61 6 43 17
+Node84 8 61 17
+Node94 4 51 16
+Node105 6 36 10
+Node111 31 105 17
+Node179 94 84 14
+Node249 2 179 11
+Node287 249 111 10
+Output 287
+
+

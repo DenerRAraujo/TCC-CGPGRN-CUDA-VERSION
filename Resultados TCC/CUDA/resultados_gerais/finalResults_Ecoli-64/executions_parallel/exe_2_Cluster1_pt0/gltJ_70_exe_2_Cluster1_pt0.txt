@@ -1,0 +1,22 @@
+Node301 32 19 12
+Output 301
+
+
+Node62 14 23 10
+Output 62
+
+
+Node110 8 41 10
+Output 110
+
+
+Node166 32 33 11
+Output 166
+
+
+Node74 36 21 17
+Node296 19 74 10
+Node506 13 296 12
+Output 506
+
+

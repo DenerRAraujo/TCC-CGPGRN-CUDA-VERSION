@@ -1,0 +1,12 @@
+./progCUDA kmeans/Cluster0/geneNames_0_pt0.txt exe_5_Cluster0_pt0 Ecoli-32 melR 48 kmeans/Cluster0/truth_tables_pt0 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt0.txt exe_5_Cluster0_pt0 Ecoli-32 malI 49 kmeans/Cluster0/truth_tables_pt0 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt0.txt exe_5_Cluster0_pt0 Ecoli-32 rbsK 50 kmeans/Cluster0/truth_tables_pt0 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt0.txt exe_5_Cluster0_pt0 Ecoli-32 malY 51 kmeans/Cluster0/truth_tables_pt0 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt0.txt exe_5_Cluster0_pt0 Ecoli-32 rbsB 52 kmeans/Cluster0/truth_tables_pt0 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt0.txt exe_5_Cluster0_pt0 Ecoli-32 rhaA 53 kmeans/Cluster0/truth_tables_pt0 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt0.txt exe_5_Cluster0_pt0 Ecoli-32 rbsD 54 kmeans/Cluster0/truth_tables_pt0 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt0.txt exe_5_Cluster0_pt0 Ecoli-32 malX 55 kmeans/Cluster0/truth_tables_pt0 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt0.txt exe_5_Cluster0_pt0 Ecoli-32 rbsA 56 kmeans/Cluster0/truth_tables_pt0 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt0.txt exe_5_Cluster0_pt0 Ecoli-32 melB 57 kmeans/Cluster0/truth_tables_pt0 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt0.txt exe_5_Cluster0_pt0 Ecoli-32 rbsC 58 kmeans/Cluster0/truth_tables_pt0 0 
+./progCUDA kmeans/Cluster0/geneNames_0_pt0.txt exe_5_Cluster0_pt0 Ecoli-32 agp 59 kmeans/Cluster0/truth_tables_pt0 0 

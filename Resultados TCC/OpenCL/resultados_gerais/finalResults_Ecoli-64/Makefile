@@ -1,0 +1,9 @@
+CC = g++
+CFLAGS = -O3 -Wall
+
+MAXOUTVALUE = 1
+MAXNODESVALUE = 500
+MAXEVAL = 150000
+
+main:
+	${CC} ${CFLAGS} -Isource/amd/include -DMAX_OUTPUTS=${MAXOUTVALUE} -DMAX_NODES=${MAXNODESVALUE} -DNUM_GENERATIONS=${MAXEVAL} source/*.cpp* -o progL -lOpenCL

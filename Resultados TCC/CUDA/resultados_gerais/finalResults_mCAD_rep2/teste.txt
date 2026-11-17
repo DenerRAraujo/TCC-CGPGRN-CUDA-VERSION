@@ -1,0 +1,8 @@
+teste: 1 de 6
+repeticao: 2 de 3
+expressao: /home/Dener_Araujo/Downloads/tese-main/TCC Claude/TCC Claude/Bases Cuda/01_mCAD_ExpressionData.csv
+pseudotempo: /home/Dener_Araujo/Downloads/tese-main/TCC Claude/TCC Claude/Bases Cuda/01_mCAD_PseudoTime.csv
+comando: python CGPGRN.py -e ExpressionData.csv -p PseudoTime.csv -cm KMeans -nc 4 -pn mCAD -s 500cells -d BiKMeans -r 5 -run
+inicio: 2026-11-16 18:22:39
+duracao: 00h08m27s
+status: OK

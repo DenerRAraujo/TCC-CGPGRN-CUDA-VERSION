@@ -1,0 +1,20 @@
+Node255 37 11 10
+Output 255
+
+
+Node78 34 33 10
+Output 78
+
+
+Node58 4 41 10
+Output 58
+
+
+Node87 17 23 10
+Output 87
+
+
+Node198 36 42 12
+Output 198
+
+

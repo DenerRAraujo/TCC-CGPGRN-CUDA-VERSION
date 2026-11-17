@@ -1,0 +1,3644 @@
+Starting spline step...
+Generating spline file...
+Initializing...
+Reading pseudotime file...
+Reading expression data file...
+Processing pseudotime step 1/2...
+Processing expression data...
+Elapsed time: 1.4109797199998866
+Processing pseudotime step 2/2...
+Processing expression data...
+chmod: não é possível acessar 'progL': Arquivo ou diretório inexistente
+g++ -O3 -Wall -Isource/amd/include -DMAX_OUTPUTS=1 -DMAX_NODES=500 -DNUM_GENERATIONS=50000 source/*.cpp* -o progL -lOpenCL
+In file included from source/utils.h:36,
+                 from source/OCLConfig.h:9,
+                 from source/OCLConfig.cpp:5:
+source/amd/include/CL/cl.hpp: In constructor ‘cl::Sampler::Sampler(const cl::Context&, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’:
+source/amd/include/CL/cl.hpp:4240:36: warning: ‘_cl_sampler* clCreateSampler(cl_context, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 4240 |         object_ = ::clCreateSampler(
+      |                   ~~~~~~~~~~~~~~~~~^
+ 4241 |             context(),
+      |             ~~~~~~~~~~              
+ 4242 |             normalized_coords,
+      |             ~~~~~~~~~~~~~~~~~~      
+ 4243 |             addressing_mode,
+      |             ~~~~~~~~~~~~~~~~        
+ 4244 |             filter_mode,
+      |             ~~~~~~~~~~~~            
+ 4245 |             &error);
+      |             ~~~~~~~                 
+In file included from source/amd/include/CL/opencl.h:42,
+                 from source/amd/include/CL/cl.hpp:177:
+source/amd/include/CL/cl.h:1366:1: note: declared here
+ 1366 | clCreateSampler(cl_context          /* context */,
+      | ^~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: At global scope:
+source/amd/include/CL/cl.hpp:4726:28: warning: ignoring attributes on template argument ‘cl_int’ {aka ‘int’} [-Wignored-attributes]
+ 4726 |         VECTOR_CLASS<cl_int>* binaryStatus = NULL,
+      |                            ^
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5084:45: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5084 |             object_ = ::clCreateCommandQueue(
+      |                       ~~~~~~~~~~~~~~~~~~~~~~^
+ 5085 |                 context(), device(), properties, &error);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(const cl::Context&, const cl::Device&, cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5101:41: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5101 |         object_ = ::clCreateCommandQueue(
+      |                   ~~~~~~~~~~~~~~~~~~~~~~^
+ 5102 |             context(), device(), properties, &error);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In member function ‘cl_int cl::CommandQueue::enqueueTask(const cl::Kernel&, const std::vector<cl::Event>*, cl::Event*) const’:
+source/amd/include/CL/cl.hpp:5878:28: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+ 5878 |             ::clEnqueueTask(
+      |             ~~~~~~~~~~~~~~~^
+ 5879 |                 object_, kernel(),
+      |                 ~~~~~~~~~~~~~~~~~~
+ 5880 |                 (events != NULL) ? (cl_uint) events->size() : 0,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5881 |                 (events != NULL && events->size() > 0) ? (cl_event*) &events->front() : NULL,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5882 |                 (event != NULL) ? &tmp : NULL),
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1373:1: note: declared here
+ 1373 | clEnqueueTask(cl_command_queue  /* command_queue */,
+      | ^~~~~~~~~~~~~
+source/OCLConfig.cpp: In constructor ‘OCLConfig::OCLConfig()’:
+source/OCLConfig.cpp:62:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<cl::Platform>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   62 |     for(int i = 0; i < platforms.size(); i++){
+      |                    ~~^~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::printOpenclDeviceInfo()’:
+source/OCLConfig.cpp:90:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<cl::Platform>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   90 |     for(int j = 0; j < platforms.size(); ++j) {
+      |                    ~~^~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:93:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<cl::Device>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   93 |         for (int i = 0; i < devices[j].size(); ++i) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘std::string OCLConfig::setProgramSource(Parameters*, Dataset*)’:
+source/OCLConfig.cpp:299:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  299 |     for(i = 0; i < fullData->M-1; i++){
+      |                ~~^~~~~~~~~~~~~~~
+source/OCLConfig.cpp:307:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  307 |     for(i = 0; i < fullData->M-1; i++){
+      |                ~~^~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::transposeDataOut(Dataset*, float**)’:
+source/OCLConfig.cpp:635:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  635 |     for(int j = 0; j < data->N + data->O; ++j ){
+      |                    ~~^~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:636:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  636 |         for(int i = 0; i < data->M; ++i ){
+      |                        ~~^~~~~~~~~
+source/OCLConfig.cpp:637:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  637 |             if(j < data->N){
+      |                ~~^~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::transposeData(Dataset*, float**, float**)’:
+source/OCLConfig.cpp:657:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  657 |     for(int j = 0; j < data->N; ++j ){
+      |                    ~~^~~~~~~~~
+source/OCLConfig.cpp:658:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  658 |         for(int i = 0; i < data->M; ++i ){
+      |                        ~~^~~~~~~~~
+source/OCLConfig.cpp:667:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  667 |     for(int j = 0; j < data->O; ++j ){
+      |                    ~~^~~~~~~~~
+source/OCLConfig.cpp:668:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  668 |         for(int i = 0; i < data->M; ++i ){
+      |                        ~~^~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::writeImageBuffer(Chromosome*)’:
+source/OCLConfig.cpp:1155:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1155 |         for(int j = 0; j < numActiveNodes; j++){
+      |                        ~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1164:51: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1164 |                 populationImageObject[index++] = *(unsigned int*)&population[i].nodes[currentActive].inputsWeight[k];
+      |                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::writeImageBufferHalf(Chromosome*)’:
+source/OCLConfig.cpp:1191:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1191 |         for(int j = 0; j < numActiveNodes; j++){
+      |                        ~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1207:28: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1207 |                         ((*(unsigned int*)&population[i].nodes[currentActive].inputsWeight[k]));
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::writeImageBufferQuarter(Chromosome*)’:
+source/OCLConfig.cpp:1239:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1239 |         for(int j = 0; j < numActiveNodes; j++){
+      |                        ~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1260:28: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1260 |                         ((*(unsigned int*)&population[i].nodes[currentActive].inputsWeight[k]));
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::writeImageBufferCompact(Chromosome*)’:
+source/OCLConfig.cpp:1290:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1290 |             if (cont < numActiveNodes) {
+      |                 ~~~~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1313:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1313 |             if (cont < numActiveNodes) {
+      |                 ~~~~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1328:52: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1328 |                 populationImageObject[index++] = (*(unsigned int*)&population[i].nodes[j].inputsWeight[k]);
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::writeImageBufferQuarterCompact(Chromosome*)’:
+source/OCLConfig.cpp:1367:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1367 |                 if (cont < numActiveNodes) {
+      |                     ~~~~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1396:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1396 |                 if (cont < numActiveNodes) {
+      |                     ~~~~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1415:59: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1415 |                 populationImageObjectQuarter[index++] = (*(unsigned int*)&population[i].nodes[j].inputsWeight[k]);
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::writeImageBufferHalfCompact(Chromosome*)’:
+source/OCLConfig.cpp:1452:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1452 |                 if (cont < numActiveNodes) {
+      |                     ~~~~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1479:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1479 |                 if (cont < numActiveNodes) {
+      |                     ~~~~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1496:56: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1496 |                 populationImageObjectHalf[index++] = (*(unsigned int*)&population[i].nodes[j].inputsWeight[k]);
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘unsigned int OCLConfig::return_compact_inputs_weights(float, float)’:
+source/OCLConfig.cpp:1603:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1603 |     return  (*(unsigned int*)(&in0) & (0xFFFF0000)) |  (*(unsigned int*)(&in1) >>16 );
+      |               ^~~~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1603:58: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1603 |     return  (*(unsigned int*)(&in0) & (0xFFFF0000)) |  (*(unsigned int*)(&in1) >>16 );
+      |                                                          ^~~~~~~~~~~~~~~~~~~~~
+In file included from source/cgp.h:9,
+                 from source/cgp.cpp:5:
+source/stack.h:5: warning: header guard ‘PPCGPDE_STACK_H’ followed by ‘#define’ of a different macro [-Wheader-guard]
+    5 | #ifndef PPCGPDE_STACK_H
+source/stack.h:6: note: ‘PCGPDE_STACK_H’ is defined here; did you mean ‘PPCGPDE_STACK_H’?
+    6 | #define PCGPDE_STACK_H
+In file included from source/utils.h:36,
+                 from source/cgp.h:8:
+source/amd/include/CL/cl.hpp: In constructor ‘cl::Sampler::Sampler(const cl::Context&, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’:
+source/amd/include/CL/cl.hpp:4240:36: warning: ‘_cl_sampler* clCreateSampler(cl_context, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 4240 |         object_ = ::clCreateSampler(
+      |                   ~~~~~~~~~~~~~~~~~^
+ 4241 |             context(),
+      |             ~~~~~~~~~~              
+ 4242 |             normalized_coords,
+      |             ~~~~~~~~~~~~~~~~~~      
+ 4243 |             addressing_mode,
+      |             ~~~~~~~~~~~~~~~~        
+ 4244 |             filter_mode,
+      |             ~~~~~~~~~~~~            
+ 4245 |             &error);
+      |             ~~~~~~~                 
+In file included from source/amd/include/CL/opencl.h:42,
+                 from source/amd/include/CL/cl.hpp:177:
+source/amd/include/CL/cl.h:1366:1: note: declared here
+ 1366 | clCreateSampler(cl_context          /* context */,
+      | ^~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: At global scope:
+source/amd/include/CL/cl.hpp:4726:28: warning: ignoring attributes on template argument ‘cl_int’ {aka ‘int’} [-Wignored-attributes]
+ 4726 |         VECTOR_CLASS<cl_int>* binaryStatus = NULL,
+      |                            ^
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5084:45: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5084 |             object_ = ::clCreateCommandQueue(
+      |                       ~~~~~~~~~~~~~~~~~~~~~~^
+ 5085 |                 context(), device(), properties, &error);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(const cl::Context&, const cl::Device&, cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5101:41: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5101 |         object_ = ::clCreateCommandQueue(
+      |                   ~~~~~~~~~~~~~~~~~~~~~~^
+ 5102 |             context(), device(), properties, &error);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In member function ‘cl_int cl::CommandQueue::enqueueTask(const cl::Kernel&, const std::vector<cl::Event>*, cl::Event*) const’:
+source/amd/include/CL/cl.hpp:5878:28: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+ 5878 |             ::clEnqueueTask(
+      |             ~~~~~~~~~~~~~~~^
+ 5879 |                 object_, kernel(),
+      |                 ~~~~~~~~~~~~~~~~~~
+ 5880 |                 (events != NULL) ? (cl_uint) events->size() : 0,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5881 |                 (events != NULL && events->size() > 0) ? (cl_event*) &events->front() : NULL,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5882 |                 (event != NULL) ? &tmp : NULL),
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1373:1: note: declared here
+ 1373 | clEnqueueTask(cl_command_queue  /* command_queue */,
+      | ^~~~~~~~~~~~~
+source/cgp.cpp: In function ‘void activateNodes(Chromosome*, Parameters*)’:
+source/cgp.cpp:52:9: warning: variable ‘alreadyEvaluated’ set but not used [-Wunused-but-set-variable]
+   52 |     int alreadyEvaluated[MAX_NODES];
+      |         ^~~~~~~~~~~~~~~~
+source/cgp.cpp: In function ‘void evaluateCircuit(Chromosome*, Dataset*)’:
+source/cgp.cpp:120:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  120 |     for(i = 0; i < data->M; i++){
+      |                ~~^~~~~~~~~
+source/cgp.cpp: In function ‘void evaluateCircuitValidation(Chromosome*, Dataset*)’:
+source/cgp.cpp:131:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  131 |     for(i = 0; i < data->M; i++){
+      |                ~~^~~~~~~~~
+source/cgp.cpp: In function ‘void evaluateCircuitLinear(Chromosome*, Dataset*)’:
+source/cgp.cpp:141:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  141 |     for(i = 0; i < data->M; i++){
+      |                ~~^~~~~~~~~
+source/cgp.cpp: In function ‘void evaluateCircuitValidationLinear(Chromosome*, Dataset*)’:
+source/cgp.cpp:151:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  151 |     for(i = 0; i < data->M; i++){
+      |                ~~^~~~~~~~~
+source/cgp.cpp: In function ‘float executeFunction(Chromosome*, int, ExStack*)’:
+source/cgp.cpp:171:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  171 |             for(i = 1; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:178:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  178 |             for(i = 1; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:185:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  185 |             for(i = 1; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:192:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  192 |             for(i = 1; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:215:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  215 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:224:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  224 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:233:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  233 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:250:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  250 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:259:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  259 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:268:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  268 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:312:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  312 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:319:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  319 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:327:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  327 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:338:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  338 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:345:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  345 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:164:9: warning: unused variable ‘r1’ [-Wunused-variable]
+  164 |     int r1, r2;
+      |         ^~
+source/cgp.cpp:164:13: warning: unused variable ‘r2’ [-Wunused-variable]
+  164 |     int r1, r2;
+      |             ^~
+source/cgp.cpp: In function ‘void runCircuit(Chromosome*, Dataset*, int, int)’:
+source/cgp.cpp:404:54: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  404 |             for (int j = inputsEvaluatedAux[node]; j < c->nodes[node].maxInputs; j++) {
+      |                                                    ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+source/cgp.cpp:427:41: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  427 |             if(inputsEvaluatedAux[node] == c->nodes[node].maxInputs){
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/cgp.cpp:363:11: warning: unused variable ‘maxPredicted’ [-Wunused-variable]
+  363 |     float maxPredicted = -DBL_MAX;
+      |           ^~~~~~~~~~~~
+source/cgp.cpp:364:9: warning: unused variable ‘predictedClass’ [-Wunused-variable]
+  364 |     int predictedClass = 0;
+      |         ^~~~~~~~~~~~~~
+source/cgp.cpp:365:9: warning: unused variable ‘correctClass’ [-Wunused-variable]
+  365 |     int correctClass = 0;
+      |         ^~~~~~~~~~~~
+source/cgp.cpp: In function ‘void runCircuitLinear(Chromosome*, Dataset*, int, int)’:
+source/cgp.cpp:501:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  501 |     for(i = 0; i < c->numActiveNodes; i++){
+      |                ~~^~~~~~~~~~~~~~~~~~~
+source/cgp.cpp: In function ‘Chromosome* mutateTopologyProbabilistic(Chromosome*, Parameters*, int*, int)’:
+source/cgp.cpp:669:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  669 |         for(j = 0; j < c->nodes[i].maxInputs; j++) {
+      |                    ~~^~~~~~~~~~~~~~~~~~~~~~~
+source/cgp.cpp: In function ‘void copyActiveNodes(Chromosome*, ActiveChromosome*)’:
+source/cgp.cpp:701:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  701 |         for(int j = 0; j < numActiveNodes; j++){
+      |                        ~~^~~~~~~~~~~~~~~~
+source/cgp.cpp: In function ‘Chromosome* mutateTopologyProbabilistic2(Chromosome*, Parameters*, int*, int, int)’:
+source/cgp.cpp:731:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  731 |         for(j = 0; j < c->nodes[i].maxInputs; j++) {
+      |                    ~~^~~~~~~~~~~~~~~~~~~~~~~
+source/cgp.cpp:723:13: warning: unused variable ‘nodeIndex’ [-Wunused-variable]
+  723 |         int nodeIndex  = index * 1024 + ((i*MAX_ARITY) % 1024);
+      |             ^~~~~~~~~
+source/cgp.cpp: In function ‘Chromosome* mutateTopologyProbabilisticActive(Chromosome*, Parameters*, int*, int)’:
+source/cgp.cpp:764:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  764 |             for(j = 0; j < c->nodes[i].maxInputs; j++) {
+      |                        ~~^~~~~~~~~~~~~~~~~~~~~~~
+source/cgp.cpp: In function ‘Chromosome* mutateTopologyPoint(Chromosome*, Parameters*, int*)’:
+source/cgp.cpp:847:30: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  847 |         } else if (nodeIndex <= MAX_NODES + (num_inputs)) { //select input
+      |                    ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/cgp.cpp: In function ‘Chromosome* CGP(Dataset*, Parameters*, int*, double*, double*, std::ofstream&)’:
+source/cgp.cpp:886:9: warning: unused variable ‘factivel’ [-Wunused-variable]
+  886 |     int factivel = 0;
+      |         ^~~~~~~~
+source/cgp.cpp:889:16: warning: unused variable ‘mutated_best’ [-Wunused-variable]
+  889 |     Chromosome mutated_best;
+      |                ^~~~~~~~~~~~
+source/cgp.cpp: In function ‘Chromosome* PCGP(Dataset*, Parameters*, OCLConfig*, int*, double*, double*, std::ofstream&)’:
+source/cgp.cpp:1253:33: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long int’ [-Wformat=]
+ 1253 |             printf("Generation %d:\n", iterations);
+      |                                ~^      ~~~~~~~~~~
+      |                                 |      |
+      |                                 int    long int
+      |                                %ld
+source/cgp.cpp:1047:23: warning: unused variable ‘activePopulation’ [-Wunused-variable]
+ 1047 |     ActiveChromosome* activePopulation = new ActiveChromosome[NUM_INDIV];
+      |                       ^~~~~~~~~~~~~~~~
+source/cgp.cpp:1048:24: warning: unused variable ‘compactPopulation’ [-Wunused-variable]
+ 1048 |     CompactChromosome *compactPopulation = new CompactChromosome[NUM_INDIV];
+      |                        ^~~~~~~~~~~~~~~~~
+source/cgp.cpp: In function ‘float executeFunction(Chromosome*, int, ExStack*)’:
+source/cgp.cpp:356:12: warning: ‘result’ may be used uninitialized [-Wmaybe-uninitialized]
+  356 |     return result;
+      |            ^~~~~~
+source/cgp.cpp:160:11: note: ‘result’ was declared here
+  160 |     float result, sum;
+      |           ^~~~~~
+In file included from source/cgp.h:9,
+                 from source/main.cpp:3:
+source/stack.h:5: warning: header guard ‘PPCGPDE_STACK_H’ followed by ‘#define’ of a different macro [-Wheader-guard]
+    5 | #ifndef PPCGPDE_STACK_H
+source/stack.h:6: note: ‘PCGPDE_STACK_H’ is defined here; did you mean ‘PPCGPDE_STACK_H’?
+    6 | #define PCGPDE_STACK_H
+In file included from source/utils.h:36,
+                 from source/cgp.h:8:
+source/amd/include/CL/cl.hpp: In constructor ‘cl::Sampler::Sampler(const cl::Context&, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’:
+source/amd/include/CL/cl.hpp:4240:36: warning: ‘_cl_sampler* clCreateSampler(cl_context, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 4240 |         object_ = ::clCreateSampler(
+      |                   ~~~~~~~~~~~~~~~~~^
+ 4241 |             context(),
+      |             ~~~~~~~~~~              
+ 4242 |             normalized_coords,
+      |             ~~~~~~~~~~~~~~~~~~      
+ 4243 |             addressing_mode,
+      |             ~~~~~~~~~~~~~~~~        
+ 4244 |             filter_mode,
+      |             ~~~~~~~~~~~~            
+ 4245 |             &error);
+      |             ~~~~~~~                 
+In file included from source/amd/include/CL/opencl.h:42,
+                 from source/amd/include/CL/cl.hpp:177:
+source/amd/include/CL/cl.h:1366:1: note: declared here
+ 1366 | clCreateSampler(cl_context          /* context */,
+      | ^~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: At global scope:
+source/amd/include/CL/cl.hpp:4726:28: warning: ignoring attributes on template argument ‘cl_int’ {aka ‘int’} [-Wignored-attributes]
+ 4726 |         VECTOR_CLASS<cl_int>* binaryStatus = NULL,
+      |                            ^
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5084:45: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5084 |             object_ = ::clCreateCommandQueue(
+      |                       ~~~~~~~~~~~~~~~~~~~~~~^
+ 5085 |                 context(), device(), properties, &error);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(const cl::Context&, const cl::Device&, cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5101:41: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5101 |         object_ = ::clCreateCommandQueue(
+      |                   ~~~~~~~~~~~~~~~~~~~~~~^
+ 5102 |             context(), device(), properties, &error);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In member function ‘cl_int cl::CommandQueue::enqueueTask(const cl::Kernel&, const std::vector<cl::Event>*, cl::Event*) const’:
+source/amd/include/CL/cl.hpp:5878:28: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+ 5878 |             ::clEnqueueTask(
+      |             ~~~~~~~~~~~~~~~^
+ 5879 |                 object_, kernel(),
+      |                 ~~~~~~~~~~~~~~~~~~
+ 5880 |                 (events != NULL) ? (cl_uint) events->size() : 0,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5881 |                 (events != NULL && events->size() > 0) ? (cl_event*) &events->front() : NULL,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5882 |                 (event != NULL) ? &tmp : NULL),
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1373:1: note: declared here
+ 1373 | clEnqueueTask(cl_command_queue  /* command_queue */,
+      | ^~~~~~~~~~~~~
+source/main.cpp: In function ‘void stackLocalNode(Chromosome*, unsigned int, std::vector<int>*, int)’:
+source/main.cpp:16:40: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+   16 |         if(c->nodes[nodePos].inputs[0] >= nInputs){
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+source/main.cpp:29:40: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+   29 |         if(c->nodes[nodePos].inputs[0] >= nInputs){
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+source/main.cpp:40:40: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+   40 |         if(c->nodes[nodePos].inputs[1] >= nInputs){
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+source/main.cpp: In function ‘int main(int, char**)’:
+source/main.cpp:266:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  266 |     for(int i = 0; i < ocl->maxLocalSize * NUM_INDIV; i++){
+source/main.cpp:354:34: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  354 |                 for(int k = 0; k < localNodesPerOutput.size(); k++){
+      |                                ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/main.cpp:381:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::vector<int> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  381 |         for(int i = 0; i < inputsPerOutput.size(); i++){
+      |                        ~~^~~~~~~~~~~~~~~~~~~~~~~~
+source/main.cpp:383:30: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  383 |             for(int j = 0; j < params->N; j++){
+      |                            ~~^~~~~~~~~~~
+source/main.cpp:458:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  458 |     for(int i = 0; i < fullData.N; i++){
+      |                    ~~^~~~~~~~~~~~
+source/main.cpp:474:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::__cxx11::basic_string<char> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  474 |         for(int i = 0; i < geneNames.size(); i++) {
+      |                        ~~^~~~~~~~~~~~~~~~~~
+In file included from source/stack.cpp:5:
+source/stack.h:5: warning: header guard ‘PPCGPDE_STACK_H’ followed by ‘#define’ of a different macro [-Wheader-guard]
+    5 | #ifndef PPCGPDE_STACK_H
+source/stack.h:6: note: ‘PCGPDE_STACK_H’ is defined here; did you mean ‘PPCGPDE_STACK_H’?
+    6 | #define PCGPDE_STACK_H
+source/stack.cpp: In function ‘unsigned int pop(Stack*)’:
+source/stack.cpp:20:1: warning: control reaches end of non-void function [-Wreturn-type]
+   20 | }
+      | ^
+source/stack.cpp: In function ‘float popEx(ExStack*)’:
+source/stack.cpp:34:1: warning: control reaches end of non-void function [-Wreturn-type]
+   34 | }
+      | ^
+In file included from source/utils.h:36,
+                 from source/utils.cpp:5:
+source/amd/include/CL/cl.hpp: In constructor ‘cl::Sampler::Sampler(const cl::Context&, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’:
+source/amd/include/CL/cl.hpp:4240:36: warning: ‘_cl_sampler* clCreateSampler(cl_context, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 4240 |         object_ = ::clCreateSampler(
+      |                   ~~~~~~~~~~~~~~~~~^
+ 4241 |             context(),
+      |             ~~~~~~~~~~              
+ 4242 |             normalized_coords,
+      |             ~~~~~~~~~~~~~~~~~~      
+ 4243 |             addressing_mode,
+      |             ~~~~~~~~~~~~~~~~        
+ 4244 |             filter_mode,
+      |             ~~~~~~~~~~~~            
+ 4245 |             &error);
+      |             ~~~~~~~                 
+In file included from source/amd/include/CL/opencl.h:42,
+                 from source/amd/include/CL/cl.hpp:177:
+source/amd/include/CL/cl.h:1366:1: note: declared here
+ 1366 | clCreateSampler(cl_context          /* context */,
+      | ^~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: At global scope:
+source/amd/include/CL/cl.hpp:4726:28: warning: ignoring attributes on template argument ‘cl_int’ {aka ‘int’} [-Wignored-attributes]
+ 4726 |         VECTOR_CLASS<cl_int>* binaryStatus = NULL,
+      |                            ^
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5084:45: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5084 |             object_ = ::clCreateCommandQueue(
+      |                       ~~~~~~~~~~~~~~~~~~~~~~^
+ 5085 |                 context(), device(), properties, &error);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(const cl::Context&, const cl::Device&, cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5101:41: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5101 |         object_ = ::clCreateCommandQueue(
+      |                   ~~~~~~~~~~~~~~~~~~~~~~^
+ 5102 |             context(), device(), properties, &error);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In member function ‘cl_int cl::CommandQueue::enqueueTask(const cl::Kernel&, const std::vector<cl::Event>*, cl::Event*) const’:
+source/amd/include/CL/cl.hpp:5878:28: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+ 5878 |             ::clEnqueueTask(
+      |             ~~~~~~~~~~~~~~~^
+ 5879 |                 object_, kernel(),
+      |                 ~~~~~~~~~~~~~~~~~~
+ 5880 |                 (events != NULL) ? (cl_uint) events->size() : 0,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5881 |                 (events != NULL && events->size() > 0) ? (cl_event*) &events->front() : NULL,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5882 |                 (event != NULL) ? &tmp : NULL),
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1373:1: note: declared here
+ 1373 | clEnqueueTask(cl_command_queue  /* command_queue */,
+      | ^~~~~~~~~~~~~
+source/utils.cpp: In function ‘void readDataset(Parameters*, Dataset*, std::string)’:
+source/utils.cpp:157:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  157 |     for(i = 0; i < (M); i++){
+      |                ~~^~~~~
+source/utils.cpp:164:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  164 |     for(i = 0; i < (M); i++) {
+      |                ~~^~~~~
+source/utils.cpp:170:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  170 |     for(i = 0; i < (N + O); i++){
+      |                ~~^~~~~~~~~
+source/utils.cpp:175:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  175 |     for(i = 0; i < params->N; i++){
+      |                ~~^~~~~~~~~~~
+source/utils.cpp:183:13: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  183 |     for(; i < params->N+params->O; i++){
+      |           ~~^~~~~~~~~~~~~~~~~~~~~
+source/utils.cpp:195:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  195 |     for(i = 0; i < (M); i++){
+      |                ~~^~~~~
+source/utils.cpp:198:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  198 |         for(j = 0; j < (N); j++){
+      |                    ~~^~~~~
+source/utils.cpp:202:21: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  202 |         for(k = 0; j<(N+O); j++, k++){
+      |                    ~^~~~~~
+source/utils.cpp:119:9: warning: unused variable ‘readLabel’ [-Wunused-variable]
+  119 |     int readLabel = 0;
+      |         ^~~~~~~~~
+source/utils.cpp:121:9: warning: unused variable ‘info’ [-Wunused-variable]
+  121 |     int info;
+      |         ^~~~
+source/utils.cpp: In function ‘Dataset* generateFolds(Dataset*, int*, int*)’:
+source/utils.cpp:315:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  315 |         for(j = 0; j < folds[i].M; j++) // for each instance of each fold
+      |                    ~~^~~~~~~~~~~~
+source/utils.cpp:335:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  335 |     for(i = 0; i < data->O; i++) // for each class
+      |                ~~^~~~~~~~~
+source/utils.cpp:337:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  337 |         for(j = 0; j < data->M - excessData; j++) // for each instance
+      |                    ~~^~~~~~~~~~~~~~~~~~~~~~
+source/utils.cpp:343:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  343 |                 for (l = 0; l < data->N; l++)
+      |                             ~~^~~~~~~~~
+source/utils.cpp:348:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  348 |                 for (l = 0; l < data->O; l++)
+      |                             ~~^~~~~~~~~
+source/utils.cpp:276:21: warning: unused variable ‘count’ [-Wunused-variable]
+  276 |     int i, j, k, l, count;
+      |                     ^~~~~
+source/utils.cpp: In function ‘void shuffleData(Dataset*, int*, int*)’:
+source/utils.cpp:382:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  382 |     for(int i = 0; i < data->M; i++){
+      |                    ~~^~~~~~~~~
+source/utils.cpp: In function ‘Dataset* getSelectedDataset(Dataset*, int*, int, int)’:
+source/utils.cpp:424:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  424 |     for(int i = 0; i < newDataset->M; i++){
+      |                    ~~^~~~~~~~~~~~~~~
+source/utils.cpp:434:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  434 |         for(int j = 0; j < folds[foldIndex].M; j++){
+      |                        ~~^~~~~~~~~~~~~~~~~~~~
+source/utils.cpp:436:30: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  436 |             for(int k = 0; k < newDataset->N; k++){
+      |                            ~~^~~~~~~~~~~~~~~
+source/utils.cpp:440:30: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  440 |             for(int k = 0; k < newDataset->O; k++){
+      |                            ~~^~~~~~~~~~~~~~~
+source/utils.cpp: In function ‘void getIndexes(int*, int, int, int*)’:
+source/utils.cpp:481:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  481 |     for(int i = 0; i < indexes.size(); i++){
+      |                    ~~^~~~~~~~~~~~~~~~
+source/utils.cpp: In function ‘unsigned int getFunctionInputs(unsigned int)’:
+source/utils.cpp:91:1: warning: control reaches end of non-void function [-Wreturn-type]
+   91 | }
+      | ^
+./executions_parallel/exe_1_Cluster0_pt0/Coup_0_exe_1_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 1 
+1 - 0 1 | 0 
+2 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000546
+Kernel Time: 0.000388
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 9.768833 
+Total time  = 10.0469
+./executions_parallel/exe_1_Cluster0_pt0/Emx2_1_exe_1_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 0 
+1 - 0 1 | 0 
+2 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000545
+Kernel Time: 0.000390
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.407405 
+Total time  = 10.5639
+./executions_parallel/exe_2_Cluster0_pt0/Coup_2_exe_2_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 1 
+1 - 0 1 | 0 
+2 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 2.000000
+Time: 0.000652
+Kernel Time: 0.000375
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 11.960354 
+Total time  = 12.1237
+./executions_parallel/exe_2_Cluster0_pt0/Emx2_3_exe_2_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 0 
+1 - 0 1 | 0 
+2 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 1.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000657
+Kernel Time: 0.000413
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.465363 
+Total time  = 10.6225
+./executions_parallel/exe_3_Cluster0_pt0/Coup_4_exe_3_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 1 
+1 - 0 1 | 0 
+2 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000533
+Kernel Time: 0.000381
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.621685 
+Total time  = 10.7857
+./executions_parallel/exe_3_Cluster0_pt0/Emx2_5_exe_3_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 0 
+1 - 0 1 | 0 
+2 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 3.000000
+Time: 0.000532
+Kernel Time: 0.000379
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.111999 
+Total time  = 10.269
+./executions_parallel/exe_4_Cluster0_pt0/Coup_6_exe_4_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 1 
+1 - 0 1 | 0 
+2 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000563
+Kernel Time: 0.000403
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 9.904176 
+Total time  = 10.0646
+./executions_parallel/exe_4_Cluster0_pt0/Emx2_7_exe_4_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 0 
+1 - 0 1 | 0 
+2 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000667
+Kernel Time: 0.000383
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.523156 
+Total time  = 10.6808
+./executions_parallel/exe_5_Cluster0_pt0/Coup_8_exe_5_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 1 
+1 - 0 1 | 0 
+2 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000532
+Kernel Time: 0.000372
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.757203 
+Total time  = 10.9127
+./executions_parallel/exe_5_Cluster0_pt0/Emx2_9_exe_5_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 0 
+1 - 0 1 | 0 
+2 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 3.000000
+Time: 0.000545
+Kernel Time: 0.000379
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.538903 
+Total time  = 10.6949
+./executions_parallel/exe_1_Cluster1_pt0/Fgf8_0_exe_1_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000527
+Kernel Time: 0.000364
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.974920 
+Total time  = 11.1299
+./executions_parallel/exe_1_Cluster1_pt0/Pax6_1_exe_1_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 3.000000
+Time: 0.000530
+Kernel Time: 0.000381
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.130216 
+Total time  = 10.2851
+./executions_parallel/exe_1_Cluster1_pt0/Sp8_2_exe_1_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000520
+Kernel Time: 0.000374
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.790278 
+Total time  = 10.9472
+./executions_parallel/exe_2_Cluster1_pt0/Fgf8_3_exe_2_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000523
+Kernel Time: 0.000371
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.734103 
+Total time  = 10.8958
+./executions_parallel/exe_2_Cluster1_pt0/Pax6_4_exe_2_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 3.000000
+Time: 0.000612
+Kernel Time: 0.000399
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 11.342412 
+Total time  = 11.496
+./executions_parallel/exe_2_Cluster1_pt0/Sp8_5_exe_2_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000513
+Kernel Time: 0.000359
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 12.034739 
+Total time  = 12.1976
+./executions_parallel/exe_3_Cluster1_pt0/Fgf8_6_exe_3_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000533
+Kernel Time: 0.000375
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.436768 
+Total time  = 10.6001
+./executions_parallel/exe_3_Cluster1_pt0/Pax6_7_exe_3_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 2.000000
+Time: 0.000664
+Kernel Time: 0.000383
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 11.513387 
+Total time  = 11.6676
+./executions_parallel/exe_3_Cluster1_pt0/Sp8_8_exe_3_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000559
+Kernel Time: 0.000401
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 11.525271 
+Total time  = 11.6898
+./executions_parallel/exe_4_Cluster1_pt0/Fgf8_9_exe_4_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000586
+Kernel Time: 0.000362
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 11.870437 
+Total time  = 12.0249
+./executions_parallel/exe_4_Cluster1_pt0/Pax6_10_exe_4_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 2.000000
+Time: 0.000574
+Kernel Time: 0.000372
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.085775 
+Total time  = 10.2461
+./executions_parallel/exe_4_Cluster1_pt0/Sp8_11_exe_4_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000532
+Kernel Time: 0.000351
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 11.222381 
+Total time  = 11.3786
+./executions_parallel/exe_5_Cluster1_pt0/Fgf8_12_exe_5_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000578
+Kernel Time: 0.000383
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 12.079400 
+Total time  = 12.2447
+./executions_parallel/exe_5_Cluster1_pt0/Pax6_13_exe_5_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 3.000000
+Time: 0.000507
+Kernel Time: 0.000362
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 9.889768 
+Total time  = 10.0445
+./executions_parallel/exe_5_Cluster1_pt0/Sp8_14_exe_5_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 0 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000580
+Kernel Time: 0.000377
+
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.728994 
+Total time  = 10.8932
+g++ -O3 -Wall -Isource/amd/include -DMAX_OUTPUTS=1 -DMAX_NODES=500 -DNUM_GENERATIONS=50000 source/*.cpp* -o progL -lOpenCL
+In file included from source/utils.h:36,
+                 from source/OCLConfig.h:9,
+                 from source/OCLConfig.cpp:5:
+source/amd/include/CL/cl.hpp: In constructor ‘cl::Sampler::Sampler(const cl::Context&, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’:
+source/amd/include/CL/cl.hpp:4240:36: warning: ‘_cl_sampler* clCreateSampler(cl_context, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 4240 |         object_ = ::clCreateSampler(
+      |                   ~~~~~~~~~~~~~~~~~^
+ 4241 |             context(),
+      |             ~~~~~~~~~~              
+ 4242 |             normalized_coords,
+      |             ~~~~~~~~~~~~~~~~~~      
+ 4243 |             addressing_mode,
+      |             ~~~~~~~~~~~~~~~~        
+ 4244 |             filter_mode,
+      |             ~~~~~~~~~~~~            
+ 4245 |             &error);
+      |             ~~~~~~~                 
+In file included from source/amd/include/CL/opencl.h:42,
+                 from source/amd/include/CL/cl.hpp:177:
+source/amd/include/CL/cl.h:1366:1: note: declared here
+ 1366 | clCreateSampler(cl_context          /* context */,
+      | ^~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: At global scope:
+source/amd/include/CL/cl.hpp:4726:28: warning: ignoring attributes on template argument ‘cl_int’ {aka ‘int’} [-Wignored-attributes]
+ 4726 |         VECTOR_CLASS<cl_int>* binaryStatus = NULL,
+      |                            ^
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5084:45: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5084 |             object_ = ::clCreateCommandQueue(
+      |                       ~~~~~~~~~~~~~~~~~~~~~~^
+ 5085 |                 context(), device(), properties, &error);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(const cl::Context&, const cl::Device&, cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5101:41: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5101 |         object_ = ::clCreateCommandQueue(
+      |                   ~~~~~~~~~~~~~~~~~~~~~~^
+ 5102 |             context(), device(), properties, &error);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In member function ‘cl_int cl::CommandQueue::enqueueTask(const cl::Kernel&, const std::vector<cl::Event>*, cl::Event*) const’:
+source/amd/include/CL/cl.hpp:5878:28: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+ 5878 |             ::clEnqueueTask(
+      |             ~~~~~~~~~~~~~~~^
+ 5879 |                 object_, kernel(),
+      |                 ~~~~~~~~~~~~~~~~~~
+ 5880 |                 (events != NULL) ? (cl_uint) events->size() : 0,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5881 |                 (events != NULL && events->size() > 0) ? (cl_event*) &events->front() : NULL,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5882 |                 (event != NULL) ? &tmp : NULL),
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1373:1: note: declared here
+ 1373 | clEnqueueTask(cl_command_queue  /* command_queue */,
+      | ^~~~~~~~~~~~~
+source/OCLConfig.cpp: In constructor ‘OCLConfig::OCLConfig()’:
+source/OCLConfig.cpp:62:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<cl::Platform>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   62 |     for(int i = 0; i < platforms.size(); i++){
+      |                    ~~^~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::printOpenclDeviceInfo()’:
+source/OCLConfig.cpp:90:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<cl::Platform>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   90 |     for(int j = 0; j < platforms.size(); ++j) {
+      |                    ~~^~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:93:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<cl::Device>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   93 |         for (int i = 0; i < devices[j].size(); ++i) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘std::string OCLConfig::setProgramSource(Parameters*, Dataset*)’:
+source/OCLConfig.cpp:299:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  299 |     for(i = 0; i < fullData->M-1; i++){
+      |                ~~^~~~~~~~~~~~~~~
+source/OCLConfig.cpp:307:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  307 |     for(i = 0; i < fullData->M-1; i++){
+      |                ~~^~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::transposeDataOut(Dataset*, float**)’:
+source/OCLConfig.cpp:635:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  635 |     for(int j = 0; j < data->N + data->O; ++j ){
+      |                    ~~^~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:636:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  636 |         for(int i = 0; i < data->M; ++i ){
+      |                        ~~^~~~~~~~~
+source/OCLConfig.cpp:637:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  637 |             if(j < data->N){
+      |                ~~^~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::transposeData(Dataset*, float**, float**)’:
+source/OCLConfig.cpp:657:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  657 |     for(int j = 0; j < data->N; ++j ){
+      |                    ~~^~~~~~~~~
+source/OCLConfig.cpp:658:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  658 |         for(int i = 0; i < data->M; ++i ){
+      |                        ~~^~~~~~~~~
+source/OCLConfig.cpp:667:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  667 |     for(int j = 0; j < data->O; ++j ){
+      |                    ~~^~~~~~~~~
+source/OCLConfig.cpp:668:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  668 |         for(int i = 0; i < data->M; ++i ){
+      |                        ~~^~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::writeImageBuffer(Chromosome*)’:
+source/OCLConfig.cpp:1155:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1155 |         for(int j = 0; j < numActiveNodes; j++){
+      |                        ~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1164:51: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1164 |                 populationImageObject[index++] = *(unsigned int*)&population[i].nodes[currentActive].inputsWeight[k];
+      |                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::writeImageBufferHalf(Chromosome*)’:
+source/OCLConfig.cpp:1191:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1191 |         for(int j = 0; j < numActiveNodes; j++){
+      |                        ~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1207:28: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1207 |                         ((*(unsigned int*)&population[i].nodes[currentActive].inputsWeight[k]));
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::writeImageBufferQuarter(Chromosome*)’:
+source/OCLConfig.cpp:1239:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1239 |         for(int j = 0; j < numActiveNodes; j++){
+      |                        ~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1260:28: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1260 |                         ((*(unsigned int*)&population[i].nodes[currentActive].inputsWeight[k]));
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::writeImageBufferCompact(Chromosome*)’:
+source/OCLConfig.cpp:1290:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1290 |             if (cont < numActiveNodes) {
+      |                 ~~~~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1313:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1313 |             if (cont < numActiveNodes) {
+      |                 ~~~~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1328:52: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1328 |                 populationImageObject[index++] = (*(unsigned int*)&population[i].nodes[j].inputsWeight[k]);
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::writeImageBufferQuarterCompact(Chromosome*)’:
+source/OCLConfig.cpp:1367:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1367 |                 if (cont < numActiveNodes) {
+      |                     ~~~~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1396:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1396 |                 if (cont < numActiveNodes) {
+      |                     ~~~~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1415:59: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1415 |                 populationImageObjectQuarter[index++] = (*(unsigned int*)&population[i].nodes[j].inputsWeight[k]);
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘void OCLConfig::writeImageBufferHalfCompact(Chromosome*)’:
+source/OCLConfig.cpp:1452:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1452 |                 if (cont < numActiveNodes) {
+      |                     ~~~~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1479:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1479 |                 if (cont < numActiveNodes) {
+      |                     ~~~~~^~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1496:56: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1496 |                 populationImageObjectHalf[index++] = (*(unsigned int*)&population[i].nodes[j].inputsWeight[k]);
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp: In member function ‘unsigned int OCLConfig::return_compact_inputs_weights(float, float)’:
+source/OCLConfig.cpp:1603:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1603 |     return  (*(unsigned int*)(&in0) & (0xFFFF0000)) |  (*(unsigned int*)(&in1) >>16 );
+      |               ^~~~~~~~~~~~~~~~~~~~~
+source/OCLConfig.cpp:1603:58: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ 1603 |     return  (*(unsigned int*)(&in0) & (0xFFFF0000)) |  (*(unsigned int*)(&in1) >>16 );
+      |                                                          ^~~~~~~~~~~~~~~~~~~~~
+In file included from source/cgp.h:9,
+                 from source/cgp.cpp:5:
+source/stack.h:5: warning: header guard ‘PPCGPDE_STACK_H’ followed by ‘#define’ of a different macro [-Wheader-guard]
+    5 | #ifndef PPCGPDE_STACK_H
+source/stack.h:6: note: ‘PCGPDE_STACK_H’ is defined here; did you mean ‘PPCGPDE_STACK_H’?
+    6 | #define PCGPDE_STACK_H
+In file included from source/utils.h:36,
+                 from source/cgp.h:8:
+source/amd/include/CL/cl.hpp: In constructor ‘cl::Sampler::Sampler(const cl::Context&, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’:
+source/amd/include/CL/cl.hpp:4240:36: warning: ‘_cl_sampler* clCreateSampler(cl_context, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 4240 |         object_ = ::clCreateSampler(
+      |                   ~~~~~~~~~~~~~~~~~^
+ 4241 |             context(),
+      |             ~~~~~~~~~~              
+ 4242 |             normalized_coords,
+      |             ~~~~~~~~~~~~~~~~~~      
+ 4243 |             addressing_mode,
+      |             ~~~~~~~~~~~~~~~~        
+ 4244 |             filter_mode,
+      |             ~~~~~~~~~~~~            
+ 4245 |             &error);
+      |             ~~~~~~~                 
+In file included from source/amd/include/CL/opencl.h:42,
+                 from source/amd/include/CL/cl.hpp:177:
+source/amd/include/CL/cl.h:1366:1: note: declared here
+ 1366 | clCreateSampler(cl_context          /* context */,
+      | ^~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: At global scope:
+source/amd/include/CL/cl.hpp:4726:28: warning: ignoring attributes on template argument ‘cl_int’ {aka ‘int’} [-Wignored-attributes]
+ 4726 |         VECTOR_CLASS<cl_int>* binaryStatus = NULL,
+      |                            ^
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5084:45: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5084 |             object_ = ::clCreateCommandQueue(
+      |                       ~~~~~~~~~~~~~~~~~~~~~~^
+ 5085 |                 context(), device(), properties, &error);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(const cl::Context&, const cl::Device&, cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5101:41: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5101 |         object_ = ::clCreateCommandQueue(
+      |                   ~~~~~~~~~~~~~~~~~~~~~~^
+ 5102 |             context(), device(), properties, &error);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In member function ‘cl_int cl::CommandQueue::enqueueTask(const cl::Kernel&, const std::vector<cl::Event>*, cl::Event*) const’:
+source/amd/include/CL/cl.hpp:5878:28: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+ 5878 |             ::clEnqueueTask(
+      |             ~~~~~~~~~~~~~~~^
+ 5879 |                 object_, kernel(),
+      |                 ~~~~~~~~~~~~~~~~~~
+ 5880 |                 (events != NULL) ? (cl_uint) events->size() : 0,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5881 |                 (events != NULL && events->size() > 0) ? (cl_event*) &events->front() : NULL,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5882 |                 (event != NULL) ? &tmp : NULL),
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1373:1: note: declared here
+ 1373 | clEnqueueTask(cl_command_queue  /* command_queue */,
+      | ^~~~~~~~~~~~~
+source/cgp.cpp: In function ‘void activateNodes(Chromosome*, Parameters*)’:
+source/cgp.cpp:52:9: warning: variable ‘alreadyEvaluated’ set but not used [-Wunused-but-set-variable]
+   52 |     int alreadyEvaluated[MAX_NODES];
+      |         ^~~~~~~~~~~~~~~~
+source/cgp.cpp: In function ‘void evaluateCircuit(Chromosome*, Dataset*)’:
+source/cgp.cpp:120:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  120 |     for(i = 0; i < data->M; i++){
+      |                ~~^~~~~~~~~
+source/cgp.cpp: In function ‘void evaluateCircuitValidation(Chromosome*, Dataset*)’:
+source/cgp.cpp:131:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  131 |     for(i = 0; i < data->M; i++){
+      |                ~~^~~~~~~~~
+source/cgp.cpp: In function ‘void evaluateCircuitLinear(Chromosome*, Dataset*)’:
+source/cgp.cpp:141:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  141 |     for(i = 0; i < data->M; i++){
+      |                ~~^~~~~~~~~
+source/cgp.cpp: In function ‘void evaluateCircuitValidationLinear(Chromosome*, Dataset*)’:
+source/cgp.cpp:151:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  151 |     for(i = 0; i < data->M; i++){
+      |                ~~^~~~~~~~~
+source/cgp.cpp: In function ‘float executeFunction(Chromosome*, int, ExStack*)’:
+source/cgp.cpp:171:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  171 |             for(i = 1; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:178:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  178 |             for(i = 1; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:185:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  185 |             for(i = 1; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:192:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  192 |             for(i = 1; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:215:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  215 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:224:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  224 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:233:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  233 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:250:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  250 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:259:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  259 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:268:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  268 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:312:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  312 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:319:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  319 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:327:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  327 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:338:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  338 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:345:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  345 |             for(i = 0; i < inputs; i++){
+      |                        ~~^~~~~~~~
+source/cgp.cpp:164:9: warning: unused variable ‘r1’ [-Wunused-variable]
+  164 |     int r1, r2;
+      |         ^~
+source/cgp.cpp:164:13: warning: unused variable ‘r2’ [-Wunused-variable]
+  164 |     int r1, r2;
+      |             ^~
+source/cgp.cpp: In function ‘void runCircuit(Chromosome*, Dataset*, int, int)’:
+source/cgp.cpp:404:54: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  404 |             for (int j = inputsEvaluatedAux[node]; j < c->nodes[node].maxInputs; j++) {
+      |                                                    ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+source/cgp.cpp:427:41: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  427 |             if(inputsEvaluatedAux[node] == c->nodes[node].maxInputs){
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/cgp.cpp:363:11: warning: unused variable ‘maxPredicted’ [-Wunused-variable]
+  363 |     float maxPredicted = -DBL_MAX;
+      |           ^~~~~~~~~~~~
+source/cgp.cpp:364:9: warning: unused variable ‘predictedClass’ [-Wunused-variable]
+  364 |     int predictedClass = 0;
+      |         ^~~~~~~~~~~~~~
+source/cgp.cpp:365:9: warning: unused variable ‘correctClass’ [-Wunused-variable]
+  365 |     int correctClass = 0;
+      |         ^~~~~~~~~~~~
+source/cgp.cpp: In function ‘void runCircuitLinear(Chromosome*, Dataset*, int, int)’:
+source/cgp.cpp:501:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  501 |     for(i = 0; i < c->numActiveNodes; i++){
+      |                ~~^~~~~~~~~~~~~~~~~~~
+source/cgp.cpp: In function ‘Chromosome* mutateTopologyProbabilistic(Chromosome*, Parameters*, int*, int)’:
+source/cgp.cpp:669:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  669 |         for(j = 0; j < c->nodes[i].maxInputs; j++) {
+      |                    ~~^~~~~~~~~~~~~~~~~~~~~~~
+source/cgp.cpp: In function ‘void copyActiveNodes(Chromosome*, ActiveChromosome*)’:
+source/cgp.cpp:701:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  701 |         for(int j = 0; j < numActiveNodes; j++){
+      |                        ~~^~~~~~~~~~~~~~~~
+source/cgp.cpp: In function ‘Chromosome* mutateTopologyProbabilistic2(Chromosome*, Parameters*, int*, int, int)’:
+source/cgp.cpp:731:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  731 |         for(j = 0; j < c->nodes[i].maxInputs; j++) {
+      |                    ~~^~~~~~~~~~~~~~~~~~~~~~~
+source/cgp.cpp:723:13: warning: unused variable ‘nodeIndex’ [-Wunused-variable]
+  723 |         int nodeIndex  = index * 1024 + ((i*MAX_ARITY) % 1024);
+      |             ^~~~~~~~~
+source/cgp.cpp: In function ‘Chromosome* mutateTopologyProbabilisticActive(Chromosome*, Parameters*, int*, int)’:
+source/cgp.cpp:764:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  764 |             for(j = 0; j < c->nodes[i].maxInputs; j++) {
+      |                        ~~^~~~~~~~~~~~~~~~~~~~~~~
+source/cgp.cpp: In function ‘Chromosome* mutateTopologyPoint(Chromosome*, Parameters*, int*)’:
+source/cgp.cpp:847:30: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  847 |         } else if (nodeIndex <= MAX_NODES + (num_inputs)) { //select input
+      |                    ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/cgp.cpp: In function ‘Chromosome* CGP(Dataset*, Parameters*, int*, double*, double*, std::ofstream&)’:
+source/cgp.cpp:886:9: warning: unused variable ‘factivel’ [-Wunused-variable]
+  886 |     int factivel = 0;
+      |         ^~~~~~~~
+source/cgp.cpp:889:16: warning: unused variable ‘mutated_best’ [-Wunused-variable]
+  889 |     Chromosome mutated_best;
+      |                ^~~~~~~~~~~~
+source/cgp.cpp: In function ‘Chromosome* PCGP(Dataset*, Parameters*, OCLConfig*, int*, double*, double*, std::ofstream&)’:
+source/cgp.cpp:1253:33: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long int’ [-Wformat=]
+ 1253 |             printf("Generation %d:\n", iterations);
+      |                                ~^      ~~~~~~~~~~
+      |                                 |      |
+      |                                 int    long int
+      |                                %ld
+source/cgp.cpp:1047:23: warning: unused variable ‘activePopulation’ [-Wunused-variable]
+ 1047 |     ActiveChromosome* activePopulation = new ActiveChromosome[NUM_INDIV];
+      |                       ^~~~~~~~~~~~~~~~
+source/cgp.cpp:1048:24: warning: unused variable ‘compactPopulation’ [-Wunused-variable]
+ 1048 |     CompactChromosome *compactPopulation = new CompactChromosome[NUM_INDIV];
+      |                        ^~~~~~~~~~~~~~~~~
+source/cgp.cpp: In function ‘float executeFunction(Chromosome*, int, ExStack*)’:
+source/cgp.cpp:356:12: warning: ‘result’ may be used uninitialized [-Wmaybe-uninitialized]
+  356 |     return result;
+      |            ^~~~~~
+source/cgp.cpp:160:11: note: ‘result’ was declared here
+  160 |     float result, sum;
+      |           ^~~~~~
+In file included from source/cgp.h:9,
+                 from source/main.cpp:3:
+source/stack.h:5: warning: header guard ‘PPCGPDE_STACK_H’ followed by ‘#define’ of a different macro [-Wheader-guard]
+    5 | #ifndef PPCGPDE_STACK_H
+source/stack.h:6: note: ‘PCGPDE_STACK_H’ is defined here; did you mean ‘PPCGPDE_STACK_H’?
+    6 | #define PCGPDE_STACK_H
+In file included from source/utils.h:36,
+                 from source/cgp.h:8:
+source/amd/include/CL/cl.hpp: In constructor ‘cl::Sampler::Sampler(const cl::Context&, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’:
+source/amd/include/CL/cl.hpp:4240:36: warning: ‘_cl_sampler* clCreateSampler(cl_context, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 4240 |         object_ = ::clCreateSampler(
+      |                   ~~~~~~~~~~~~~~~~~^
+ 4241 |             context(),
+      |             ~~~~~~~~~~              
+ 4242 |             normalized_coords,
+      |             ~~~~~~~~~~~~~~~~~~      
+ 4243 |             addressing_mode,
+      |             ~~~~~~~~~~~~~~~~        
+ 4244 |             filter_mode,
+      |             ~~~~~~~~~~~~            
+ 4245 |             &error);
+      |             ~~~~~~~                 
+In file included from source/amd/include/CL/opencl.h:42,
+                 from source/amd/include/CL/cl.hpp:177:
+source/amd/include/CL/cl.h:1366:1: note: declared here
+ 1366 | clCreateSampler(cl_context          /* context */,
+      | ^~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: At global scope:
+source/amd/include/CL/cl.hpp:4726:28: warning: ignoring attributes on template argument ‘cl_int’ {aka ‘int’} [-Wignored-attributes]
+ 4726 |         VECTOR_CLASS<cl_int>* binaryStatus = NULL,
+      |                            ^
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5084:45: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5084 |             object_ = ::clCreateCommandQueue(
+      |                       ~~~~~~~~~~~~~~~~~~~~~~^
+ 5085 |                 context(), device(), properties, &error);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(const cl::Context&, const cl::Device&, cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5101:41: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5101 |         object_ = ::clCreateCommandQueue(
+      |                   ~~~~~~~~~~~~~~~~~~~~~~^
+ 5102 |             context(), device(), properties, &error);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In member function ‘cl_int cl::CommandQueue::enqueueTask(const cl::Kernel&, const std::vector<cl::Event>*, cl::Event*) const’:
+source/amd/include/CL/cl.hpp:5878:28: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+ 5878 |             ::clEnqueueTask(
+      |             ~~~~~~~~~~~~~~~^
+ 5879 |                 object_, kernel(),
+      |                 ~~~~~~~~~~~~~~~~~~
+ 5880 |                 (events != NULL) ? (cl_uint) events->size() : 0,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5881 |                 (events != NULL && events->size() > 0) ? (cl_event*) &events->front() : NULL,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5882 |                 (event != NULL) ? &tmp : NULL),
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1373:1: note: declared here
+ 1373 | clEnqueueTask(cl_command_queue  /* command_queue */,
+      | ^~~~~~~~~~~~~
+source/main.cpp: In function ‘void stackLocalNode(Chromosome*, unsigned int, std::vector<int>*, int)’:
+source/main.cpp:16:40: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+   16 |         if(c->nodes[nodePos].inputs[0] >= nInputs){
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+source/main.cpp:29:40: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+   29 |         if(c->nodes[nodePos].inputs[0] >= nInputs){
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+source/main.cpp:40:40: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+   40 |         if(c->nodes[nodePos].inputs[1] >= nInputs){
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+source/main.cpp: In function ‘int main(int, char**)’:
+source/main.cpp:266:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  266 |     for(int i = 0; i < ocl->maxLocalSize * NUM_INDIV; i++){
+source/main.cpp:354:34: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  354 |                 for(int k = 0; k < localNodesPerOutput.size(); k++){
+      |                                ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/main.cpp:381:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::vector<int> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  381 |         for(int i = 0; i < inputsPerOutput.size(); i++){
+      |                        ~~^~~~~~~~~~~~~~~~~~~~~~~~
+source/main.cpp:383:30: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  383 |             for(int j = 0; j < params->N; j++){
+      |                            ~~^~~~~~~~~~~
+source/main.cpp:458:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  458 |     for(int i = 0; i < fullData.N; i++){
+      |                    ~~^~~~~~~~~~~~
+source/main.cpp:474:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::__cxx11::basic_string<char> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  474 |         for(int i = 0; i < geneNames.size(); i++) {
+      |                        ~~^~~~~~~~~~~~~~~~~~
+In file included from source/stack.cpp:5:
+source/stack.h:5: warning: header guard ‘PPCGPDE_STACK_H’ followed by ‘#define’ of a different macro [-Wheader-guard]
+    5 | #ifndef PPCGPDE_STACK_H
+source/stack.h:6: note: ‘PCGPDE_STACK_H’ is defined here; did you mean ‘PPCGPDE_STACK_H’?
+    6 | #define PCGPDE_STACK_H
+source/stack.cpp: In function ‘unsigned int pop(Stack*)’:
+source/stack.cpp:20:1: warning: control reaches end of non-void function [-Wreturn-type]
+   20 | }
+      | ^
+source/stack.cpp: In function ‘float popEx(ExStack*)’:
+source/stack.cpp:34:1: warning: control reaches end of non-void function [-Wreturn-type]
+   34 | }
+      | ^
+In file included from source/utils.h:36,
+                 from source/utils.cpp:5:
+source/amd/include/CL/cl.hpp: In constructor ‘cl::Sampler::Sampler(const cl::Context&, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’:
+source/amd/include/CL/cl.hpp:4240:36: warning: ‘_cl_sampler* clCreateSampler(cl_context, cl_bool, cl_addressing_mode, cl_filter_mode, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 4240 |         object_ = ::clCreateSampler(
+      |                   ~~~~~~~~~~~~~~~~~^
+ 4241 |             context(),
+      |             ~~~~~~~~~~              
+ 4242 |             normalized_coords,
+      |             ~~~~~~~~~~~~~~~~~~      
+ 4243 |             addressing_mode,
+      |             ~~~~~~~~~~~~~~~~        
+ 4244 |             filter_mode,
+      |             ~~~~~~~~~~~~            
+ 4245 |             &error);
+      |             ~~~~~~~                 
+In file included from source/amd/include/CL/opencl.h:42,
+                 from source/amd/include/CL/cl.hpp:177:
+source/amd/include/CL/cl.h:1366:1: note: declared here
+ 1366 | clCreateSampler(cl_context          /* context */,
+      | ^~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: At global scope:
+source/amd/include/CL/cl.hpp:4726:28: warning: ignoring attributes on template argument ‘cl_int’ {aka ‘int’} [-Wignored-attributes]
+ 4726 |         VECTOR_CLASS<cl_int>* binaryStatus = NULL,
+      |                            ^
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5084:45: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5084 |             object_ = ::clCreateCommandQueue(
+      |                       ~~~~~~~~~~~~~~~~~~~~~~^
+ 5085 |                 context(), device(), properties, &error);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In constructor ‘cl::CommandQueue::CommandQueue(const cl::Context&, const cl::Device&, cl_command_queue_properties, cl_int*)’:
+source/amd/include/CL/cl.hpp:5101:41: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+ 5101 |         object_ = ::clCreateCommandQueue(
+      |                   ~~~~~~~~~~~~~~~~~~~~~~^
+ 5102 |             context(), device(), properties, &error);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1359:1: note: declared here
+ 1359 | clCreateCommandQueue(cl_context                     /* context */,
+      | ^~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.hpp: In member function ‘cl_int cl::CommandQueue::enqueueTask(const cl::Kernel&, const std::vector<cl::Event>*, cl::Event*) const’:
+source/amd/include/CL/cl.hpp:5878:28: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+ 5878 |             ::clEnqueueTask(
+      |             ~~~~~~~~~~~~~~~^
+ 5879 |                 object_, kernel(),
+      |                 ~~~~~~~~~~~~~~~~~~
+ 5880 |                 (events != NULL) ? (cl_uint) events->size() : 0,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5881 |                 (events != NULL && events->size() > 0) ? (cl_event*) &events->front() : NULL,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5882 |                 (event != NULL) ? &tmp : NULL),
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/amd/include/CL/cl.h:1373:1: note: declared here
+ 1373 | clEnqueueTask(cl_command_queue  /* command_queue */,
+      | ^~~~~~~~~~~~~
+source/utils.cpp: In function ‘void readDataset(Parameters*, Dataset*, std::string)’:
+source/utils.cpp:157:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  157 |     for(i = 0; i < (M); i++){
+      |                ~~^~~~~
+source/utils.cpp:164:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  164 |     for(i = 0; i < (M); i++) {
+      |                ~~^~~~~
+source/utils.cpp:170:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  170 |     for(i = 0; i < (N + O); i++){
+      |                ~~^~~~~~~~~
+source/utils.cpp:175:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  175 |     for(i = 0; i < params->N; i++){
+      |                ~~^~~~~~~~~~~
+source/utils.cpp:183:13: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  183 |     for(; i < params->N+params->O; i++){
+      |           ~~^~~~~~~~~~~~~~~~~~~~~
+source/utils.cpp:195:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  195 |     for(i = 0; i < (M); i++){
+      |                ~~^~~~~
+source/utils.cpp:198:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  198 |         for(j = 0; j < (N); j++){
+      |                    ~~^~~~~
+source/utils.cpp:202:21: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  202 |         for(k = 0; j<(N+O); j++, k++){
+      |                    ~^~~~~~
+source/utils.cpp:119:9: warning: unused variable ‘readLabel’ [-Wunused-variable]
+  119 |     int readLabel = 0;
+      |         ^~~~~~~~~
+source/utils.cpp:121:9: warning: unused variable ‘info’ [-Wunused-variable]
+  121 |     int info;
+      |         ^~~~
+source/utils.cpp: In function ‘Dataset* generateFolds(Dataset*, int*, int*)’:
+source/utils.cpp:315:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  315 |         for(j = 0; j < folds[i].M; j++) // for each instance of each fold
+      |                    ~~^~~~~~~~~~~~
+source/utils.cpp:335:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  335 |     for(i = 0; i < data->O; i++) // for each class
+      |                ~~^~~~~~~~~
+source/utils.cpp:337:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  337 |         for(j = 0; j < data->M - excessData; j++) // for each instance
+      |                    ~~^~~~~~~~~~~~~~~~~~~~~~
+source/utils.cpp:343:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  343 |                 for (l = 0; l < data->N; l++)
+      |                             ~~^~~~~~~~~
+source/utils.cpp:348:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  348 |                 for (l = 0; l < data->O; l++)
+      |                             ~~^~~~~~~~~
+source/utils.cpp:276:21: warning: unused variable ‘count’ [-Wunused-variable]
+  276 |     int i, j, k, l, count;
+      |                     ^~~~~
+source/utils.cpp: In function ‘void shuffleData(Dataset*, int*, int*)’:
+source/utils.cpp:382:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  382 |     for(int i = 0; i < data->M; i++){
+      |                    ~~^~~~~~~~~
+source/utils.cpp: In function ‘Dataset* getSelectedDataset(Dataset*, int*, int, int)’:
+source/utils.cpp:424:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  424 |     for(int i = 0; i < newDataset->M; i++){
+      |                    ~~^~~~~~~~~~~~~~~
+source/utils.cpp:434:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  434 |         for(int j = 0; j < folds[foldIndex].M; j++){
+      |                        ~~^~~~~~~~~~~~~~~~~~~~
+source/utils.cpp:436:30: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  436 |             for(int k = 0; k < newDataset->N; k++){
+      |                            ~~^~~~~~~~~~~~~~~
+source/utils.cpp:440:30: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  440 |             for(int k = 0; k < newDataset->O; k++){
+      |                            ~~^~~~~~~~~~~~~~~
+source/utils.cpp: In function ‘void getIndexes(int*, int, int, int*)’:
+source/utils.cpp:481:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  481 |     for(int i = 0; i < indexes.size(); i++){
+      |                    ~~^~~~~~~~~~~~~~~~
+source/utils.cpp: In function ‘unsigned int getFunctionInputs(unsigned int)’:
+source/utils.cpp:91:1: warning: control reaches end of non-void function [-Wreturn-type]
+   91 | }
+      | ^
+./executions_parallel/exe_1_Cluster0_pt1/Fgf8_0_exe_1_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 1 0 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 3.000000
+Time: 0.000557
+Kernel Time: 0.000380
+
+Fitness - exe 0 : 4
+Fitness - exe 1 : 4
+Fitness - exe 2 : 4
+Fitness - exe 3 : 4
+Fitness - exe 4 : 4
+Evol time: 9.003747 
+Total time  = 9.17236
+./executions_parallel/exe_1_Cluster0_pt1/Pax6_1_exe_1_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 1 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 4.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 4.000000
+Best 3 fitness: 4.000000
+Best 4 fitness: 4.000000
+Time: 0.000546
+Kernel Time: 0.000389
+
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 9.310479 
+Total time  = 9.46614
+./executions_parallel/exe_1_Cluster0_pt1/Sp8_2_exe_1_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 4.000000
+Best 1 fitness: 5.000000
+Best 2 fitness: 4.000000
+Best 3 fitness: 5.000000
+Best 4 fitness: 5.000000
+Time: 0.000532
+Kernel Time: 0.000378
+
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 8.861612 
+Total time  = 9.01833
+./executions_parallel/exe_2_Cluster0_pt1/Fgf8_3_exe_2_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 1 0 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000535
+Kernel Time: 0.000378
+
+Fitness - exe 0 : 4
+Fitness - exe 1 : 4
+Fitness - exe 2 : 4
+Fitness - exe 3 : 4
+Fitness - exe 4 : 4
+Evol time: 8.670538 
+Total time  = 8.82574
+./executions_parallel/exe_2_Cluster0_pt1/Pax6_4_exe_2_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 1 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 4.000000
+Best 2 fitness: 4.000000
+Best 3 fitness: 4.000000
+Best 4 fitness: 3.000000
+Time: 0.000596
+Kernel Time: 0.000385
+
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 8.792777 
+Total time  = 8.94971
+./executions_parallel/exe_2_Cluster0_pt1/Sp8_5_exe_2_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 4.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 4.000000
+Best 4 fitness: 4.000000
+Time: 0.000563
+Kernel Time: 0.000397
+
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 9.200129 
+Total time  = 9.35504
+./executions_parallel/exe_3_Cluster0_pt1/Fgf8_6_exe_3_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 1 0 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 3.000000
+Time: 0.000568
+Kernel Time: 0.000380
+
+Fitness - exe 0 : 4
+Fitness - exe 1 : 4
+Fitness - exe 2 : 4
+Fitness - exe 3 : 4
+Fitness - exe 4 : 4
+Evol time: 8.385198 
+Total time  = 8.54137
+./executions_parallel/exe_3_Cluster0_pt1/Pax6_7_exe_3_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 1 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 4.000000
+Best 1 fitness: 4.000000
+Best 2 fitness: 5.000000
+Best 3 fitness: 5.000000
+Best 4 fitness: 3.000000
+Time: 0.000524
+Kernel Time: 0.000368
+
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 8.752812 
+Total time  = 8.90688
+./executions_parallel/exe_3_Cluster0_pt1/Sp8_8_exe_3_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 4.000000
+Best 1 fitness: 4.000000
+Best 2 fitness: 4.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 5.000000
+Time: 0.000536
+Kernel Time: 0.000382
+
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 8.382651 
+Total time  = 8.53828
+./executions_parallel/exe_4_Cluster0_pt1/Fgf8_9_exe_4_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 1 0 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 4.000000
+Time: 0.000548
+Kernel Time: 0.000384
+
+Fitness - exe 0 : 4
+Fitness - exe 1 : 4
+Fitness - exe 2 : 4
+Fitness - exe 3 : 4
+Fitness - exe 4 : 4
+Evol time: 8.418471 
+Total time  = 8.57513
+./executions_parallel/exe_4_Cluster0_pt1/Pax6_10_exe_4_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 1 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 4.000000
+Best 1 fitness: 5.000000
+Best 2 fitness: 4.000000
+Best 3 fitness: 4.000000
+Best 4 fitness: 4.000000
+Time: 0.000573
+Kernel Time: 0.000378
+
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 8.552335 
+Total time  = 8.71221
+./executions_parallel/exe_4_Cluster0_pt1/Sp8_11_exe_4_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 4.000000
+Best 1 fitness: 4.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 4.000000
+Best 4 fitness: 3.000000
+Time: 0.000554
+Kernel Time: 0.000395
+
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 8.862603 
+Total time  = 9.01733
+./executions_parallel/exe_5_Cluster0_pt1/Fgf8_12_exe_5_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 1 0 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 4.000000
+Best 4 fitness: 2.000000
+Time: 0.000649
+Kernel Time: 0.000398
+
+Fitness - exe 0 : 4
+Fitness - exe 1 : 4
+Fitness - exe 2 : 4
+Fitness - exe 3 : 4
+Fitness - exe 4 : 4
+Evol time: 9.000315 
+Total time  = 9.15544
+./executions_parallel/exe_5_Cluster0_pt1/Pax6_13_exe_5_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 1 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 4.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 4.000000
+Best 3 fitness: 4.000000
+Best 4 fitness: 4.000000
+Time: 0.000514
+Kernel Time: 0.000363
+
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 9.106311 
+Total time  = 9.25949
+./executions_parallel/exe_5_Cluster0_pt1/Sp8_14_exe_5_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 1 0 1 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 4.000000
+Best 2 fitness: 4.000000
+Best 3 fitness: 5.000000
+Best 4 fitness: 2.000000
+Time: 0.000538
+Kernel Time: 0.000383
+
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 9.184932 
+Total time  = 9.34015
+./executions_parallel/exe_1_Cluster1_pt1/Coup_0_exe_1_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 1 
+1 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000537
+Kernel Time: 0.000376
+
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 12.849870 
+Total time  = 13.0059
+./executions_parallel/exe_1_Cluster1_pt1/Emx2_1_exe_1_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 0 
+1 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 1.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000548
+Kernel Time: 0.000382
+
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 10.752269 
+Total time  = 10.9152
+./executions_parallel/exe_2_Cluster1_pt1/Coup_2_exe_2_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 1 
+1 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 1.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000495
+Kernel Time: 0.000350
+
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 12.132882 
+Total time  = 12.2881
+./executions_parallel/exe_2_Cluster1_pt1/Emx2_3_exe_2_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 0 
+1 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000551
+Kernel Time: 0.000387
+
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 11.825301 
+Total time  = 11.9817
+./executions_parallel/exe_3_Cluster1_pt1/Coup_4_exe_3_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 1 
+1 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000544
+Kernel Time: 0.000374
+
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 13.643240 
+Total time  = 13.8042
+./executions_parallel/exe_3_Cluster1_pt1/Emx2_5_exe_3_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 0 
+1 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000533
+Kernel Time: 0.000386
+
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 11.323143 
+Total time  = 11.4786
+./executions_parallel/exe_4_Cluster1_pt1/Coup_6_exe_4_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 1 
+1 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000528
+Kernel Time: 0.000376
+
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 12.718545 
+Total time  = 12.874
+./executions_parallel/exe_4_Cluster1_pt1/Emx2_7_exe_4_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 0 
+1 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000653
+Kernel Time: 0.000371
+
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 11.409070 
+Total time  = 11.5646
+./executions_parallel/exe_5_Cluster1_pt1/Coup_8_exe_5_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 1 
+1 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000534
+Kernel Time: 0.000379
+
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 12.979353 
+Total time  = 13.1392
+./executions_parallel/exe_5_Cluster1_pt1/Emx2_9_exe_5_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset
+0 - 0 0 | 0 
+1 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+Available Devices for Platform NVIDIA CUDA:
+[0]NVIDIA GeForce RTX 5070
+	Type:   4
+	OpenCL: OpenCL C 1.2 
+	Max Comp Un: 48
+	Max WrkGr Sz: 1024
+	Fp config: 191
+	Max Mem Alloc: 3085762560
+	Local Mem Size: 49152
+	Max Const Size: 65536
+	Device Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore
+	Device Img Support: 1
+	Node size: 28
+	Node size: 16
+	Individuals size: 16016
+	Individuals size: 9008
+2 4 4 4 8
+Allocating buffers... 
+Setting NDRanges ...
+Setting compile flags...
+Transpondo dados...
+
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000572
+Kernel Time: 0.000351
+
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 11.974793 
+Total time  = 12.1314
+Elapsed time: 0.598004230000015
+End of spline step.
+Processing spline data...
+Current pseudotime:  pt0
+Starting clustering step for pseudotime pt0
+Starting KMeans Clustering...
+Calculating the best number of clusters...
+Best number of clusters:  2
+Predicting the labels for n_clusters = 2
+Generating files for cluster  0
+Generating files for cluster  1
+KMeans successfully performed.
+End clustering step for pseudotime pt0
+Discretizing data using BiKMeans for pseudotime pt0
+DISCRETIZATION
+não eh full TT
+BiKMeans sucessfully performed.
+Discretizing data for cluster 0
+Discretizing data for cluster 1
+Data discretization successfully performed.
+Generating truth tables...
+TRANSITIONS: 
+['00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10']
+DICT TRANSITIONS
+{'00': ['01', '01', '01', '01', '01', '01', '01', '01', '01', '01', '01', '01', '01', '01', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10'], '01': ['00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00'], '10': ['00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00']}
+Solving ambiguous transitions...
+AQUI
+3
+{'00': '10', '01': '00', '10': '00'}
+['101', '000']
+Generating truth tables...
+['00', '01', '10']
+0.0%
+50.0%
+100%
+Final memory usage:  202.25
+End
+Total elapsed time: 0.006736626000019896
+TRANSITIONS: 
+['000', '001', '011', '111']
+DICT TRANSITIONS
+{'000': ['001'], '001': ['011'], '011': ['111']}
+Solving ambiguous transitions...
+AQUI
+3
+{'000': '001', '001': '011', '011': '111'}
+['000', '011', '111']
+Generating truth tables...
+['000', '001', '011']
+0.0%
+33.33%
+66.67%
+100%
+Final memory usage:  202.25
+End
+Total elapsed time: 0.007702803000029235
+Generating bash scripts...
+Current pseudotime:  pt1
+Starting clustering step for pseudotime pt1
+Starting KMeans Clustering...
+Calculating the best number of clusters...
+Best number of clusters:  2
+Predicting the labels for n_clusters = 2
+Generating files for cluster  0
+Generating files for cluster  1
+KMeans successfully performed.
+End clustering step for pseudotime pt1
+Discretizing data using BiKMeans for pseudotime pt1
+DISCRETIZATION
+não eh full TT
+BiKMeans sucessfully performed.
+Discretizing data for cluster 0
+Discretizing data for cluster 1
+Data discretization successfully performed.
+Generating truth tables...
+TRANSITIONS: 
+['101', '001', '101', '001', '101', '001', '101', '001', '101', '001', '101', '001', '101', '001', '011', '010', '100', '010', '000']
+DICT TRANSITIONS
+{'101': ['001', '001', '001', '001', '001', '001', '001'], '001': ['101', '101', '101', '101', '101', '101', '011'], '011': ['010'], '010': ['100', '000'], '100': ['010']}
+Solving ambiguous transitions...
+AQUI
+5
+{'101': '001', '001': '101', '011': '010', '010': '900', '100': '010'}
+['01091', '00100', '11000']
+Generating truth tables...
+['101', '001', '011', '010', '100']
+0.0%
+33.33%
+66.67%
+100%
+Final memory usage:  202.55859375
+End
+Total elapsed time: 0.006721066999944014
+TRANSITIONS: 
+['00', '10', '11']
+DICT TRANSITIONS
+{'00': ['10'], '10': ['11']}
+Solving ambiguous transitions...
+AQUI
+2
+{'00': '10', '10': '11'}
+['11', '00']
+Generating truth tables...
+['00', '10']
+0.0%
+50.0%
+100%
+Final memory usage:  202.55859375
+End
+Total elapsed time: 0.006354871999974421
+Generating bash scripts...
+Namespace(clusterMethod='KMeans', n_clusters='4', correlation_threshold='None', expressionDataFile='ExpressionData.csv', pseudotimeFile='PseudoTime.csv', problemName='mCAD', suffix='500cells', discretizationApproach='BiKMeans', independentRuns=5, fullDiscretization=False, argSplineFile='None', splineList=False, runCGP=True, keepData=False, fullTT=False, generateSplineList=False, cgpNodes='None', cgpGens='None')

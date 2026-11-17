@@ -1,0 +1,21 @@
+Node12 6 0 16
+Output 12
+
+
+Node16 3 1 14
+Output 16
+
+
+Node16 10 0 11
+Node87 7 16 14
+Output 87
+
+
+Node15 0 7 16
+Output 15
+
+
+Node12 2 11 14
+Output 12
+
+

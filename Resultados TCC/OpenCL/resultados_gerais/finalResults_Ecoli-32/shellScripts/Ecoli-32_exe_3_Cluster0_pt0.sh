@@ -1,0 +1,12 @@
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 Ecoli-32 melR 24 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 Ecoli-32 malI 25 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 Ecoli-32 rbsK 26 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 Ecoli-32 malY 27 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 Ecoli-32 rbsB 28 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 Ecoli-32 rhaA 29 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 Ecoli-32 rbsD 30 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 Ecoli-32 malX 31 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 Ecoli-32 rbsA 32 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 Ecoli-32 melB 33 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 Ecoli-32 rbsC 34 kmeans/Cluster0/truth_tables_pt0 0 
+./progL kmeans/Cluster0/geneNames_0_pt0.txt exe_3_Cluster0_pt0 Ecoli-32 agp 35 kmeans/Cluster0/truth_tables_pt0 0 

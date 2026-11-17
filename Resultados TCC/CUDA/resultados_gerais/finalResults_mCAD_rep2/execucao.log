@@ -1,0 +1,2141 @@
+Starting spline step...
+Generating spline file...
+Initializing...
+Reading pseudotime file...
+Reading expression data file...
+Processing pseudotime step 1/2...
+Processing expression data...
+Elapsed time: 1.5076739649994124
+Processing pseudotime step 2/2...
+Processing expression data...
+nvcc -ccbin g++-13 -O3 -rdc=true -w -Xcompiler -Wall -DMAX_OUTPUTS=1 -DMAX_NODES=500 -DNUM_GENERATIONS=50000 -x cu source/CUDAConfig.cpp source/main.cpp source/cgp.cpp source/utils.cpp source/GPTime.cpp source/stack.cpp source/kernels/kernel.cu -o progCUDA
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+./executions_parallel/exe_1_Cluster0_pt0/Coup_0_exe_1_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 1 
+1 - 0 1 | 0 
+2 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000697
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 8.359177 
+Total time  = 8.64566
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_1_Cluster0_pt0/Emx2_1_exe_1_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 0 
+1 - 0 1 | 0 
+2 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000468
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 9.000914 
+Total time  = 9.16122
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_2_Cluster0_pt0/Coup_2_exe_2_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 1 
+1 - 0 1 | 0 
+2 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000486
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 11.003347 
+Total time  = 11.1708
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_2_Cluster0_pt0/Emx2_3_exe_2_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 0 
+1 - 0 1 | 0 
+2 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 1.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000471
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 9.087044 
+Total time  = 9.2476
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_3_Cluster0_pt0/Coup_4_exe_3_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 1 
+1 - 0 1 | 0 
+2 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000455
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 8.965323 
+Total time  = 9.12523
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_3_Cluster0_pt0/Emx2_5_exe_3_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 0 
+1 - 0 1 | 0 
+2 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000458
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 8.847314 
+Total time  = 9.00764
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_4_Cluster0_pt0/Coup_6_exe_4_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 1 
+1 - 0 1 | 0 
+2 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000482
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 8.425444 
+Total time  = 8.58378
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_4_Cluster0_pt0/Emx2_7_exe_4_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 0 
+1 - 0 1 | 0 
+2 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000466
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 8.943362 
+Total time  = 9.10327
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_5_Cluster0_pt0/Coup_8_exe_5_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 1 
+1 - 0 1 | 0 
+2 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000458
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 9.444909 
+Total time  = 9.60787
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_5_Cluster0_pt0/Emx2_9_exe_5_Cluster0_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt0/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 0 
+1 - 0 1 | 0 
+2 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000434
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 9.220155 
+Total time  = 9.38596
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_1_Cluster1_pt0/Fgf8_0_exe_1_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000455
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 9.627463 
+Total time  = 9.78753
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_1_Cluster1_pt0/Pax6_1_exe_1_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000516
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 8.820627 
+Total time  = 8.98228
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_1_Cluster1_pt0/Sp8_2_exe_1_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000454
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 9.491040 
+Total time  = 9.65405
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_2_Cluster1_pt0/Fgf8_3_exe_2_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000481
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 9.409594 
+Total time  = 9.56991
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_2_Cluster1_pt0/Pax6_4_exe_2_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000454
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.103985 
+Total time  = 10.2629
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_2_Cluster1_pt0/Sp8_5_exe_2_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000469
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.807174 
+Total time  = 10.9714
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_3_Cluster1_pt0/Fgf8_6_exe_3_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000443
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 8.985684 
+Total time  = 9.15211
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_3_Cluster1_pt0/Pax6_7_exe_3_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000459
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.304380 
+Total time  = 10.4728
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_3_Cluster1_pt0/Sp8_8_exe_3_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000474
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.346877 
+Total time  = 10.509
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_4_Cluster1_pt0/Fgf8_9_exe_4_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000429
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.595100 
+Total time  = 10.7536
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_4_Cluster1_pt0/Pax6_10_exe_4_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000468
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 8.800585 
+Total time  = 8.96602
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_4_Cluster1_pt0/Sp8_11_exe_4_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000454
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 9.997347 
+Total time  = 10.1552
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_5_Cluster1_pt0/Fgf8_12_exe_5_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000467
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 10.877862 
+Total time  = 11.0372
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_5_Cluster1_pt0/Pax6_13_exe_5_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000483
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 8.055325 
+Total time  = 8.23198
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_5_Cluster1_pt0/Sp8_14_exe_5_Cluster1_pt0.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt0/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 0 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000473
+Fitness - exe 0 : 3
+Fitness - exe 1 : 3
+Fitness - exe 2 : 3
+Fitness - exe 3 : 3
+Fitness - exe 4 : 3
+Evol time: 9.530005 
+Total time  = 9.68922
+Todos os recursos CUDA foram liberados.
+nvcc -ccbin g++-13 -O3 -rdc=true -w -Xcompiler -Wall -DMAX_OUTPUTS=1 -DMAX_NODES=500 -DNUM_GENERATIONS=50000 -x cu source/CUDAConfig.cpp source/main.cpp source/cgp.cpp source/utils.cpp source/GPTime.cpp source/stack.cpp source/kernels/kernel.cu -o progCUDA
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+./executions_parallel/exe_1_Cluster0_pt1/Fgf8_0_exe_1_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 1 0 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000456
+Fitness - exe 0 : 4
+Fitness - exe 1 : 4
+Fitness - exe 2 : 4
+Fitness - exe 3 : 4
+Fitness - exe 4 : 4
+Evol time: 7.462667 
+Total time  = 7.76189
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_1_Cluster0_pt1/Pax6_1_exe_1_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 1 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 4.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 4.000000
+Best 3 fitness: 4.000000
+Best 4 fitness: 4.000000
+Time: 0.000000
+Kernel Time: 0.000474
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 8.043354 
+Total time  = 8.20196
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_1_Cluster0_pt1/Sp8_2_exe_1_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 4.000000
+Best 1 fitness: 5.000000
+Best 2 fitness: 4.000000
+Best 3 fitness: 5.000000
+Best 4 fitness: 5.000000
+Time: 0.000000
+Kernel Time: 0.000450
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 7.319961 
+Total time  = 7.48492
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_2_Cluster0_pt1/Fgf8_3_exe_2_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 1 0 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000453
+Fitness - exe 0 : 4
+Fitness - exe 1 : 4
+Fitness - exe 2 : 4
+Fitness - exe 3 : 4
+Fitness - exe 4 : 4
+Evol time: 7.298724 
+Total time  = 7.46116
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_2_Cluster0_pt1/Pax6_4_exe_2_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 1 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 4.000000
+Best 2 fitness: 4.000000
+Best 3 fitness: 4.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000447
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 7.437531 
+Total time  = 7.59551
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_2_Cluster0_pt1/Sp8_5_exe_2_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 4.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 4.000000
+Best 4 fitness: 4.000000
+Time: 0.000000
+Kernel Time: 0.000475
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 7.797333 
+Total time  = 7.96145
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_3_Cluster0_pt1/Fgf8_6_exe_3_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 1 0 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000458
+Fitness - exe 0 : 4
+Fitness - exe 1 : 4
+Fitness - exe 2 : 4
+Fitness - exe 3 : 4
+Fitness - exe 4 : 4
+Evol time: 7.079376 
+Total time  = 7.23736
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_3_Cluster0_pt1/Pax6_7_exe_3_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 1 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 4.000000
+Best 1 fitness: 4.000000
+Best 2 fitness: 5.000000
+Best 3 fitness: 5.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000431
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 7.437243 
+Total time  = 7.60263
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_3_Cluster0_pt1/Sp8_8_exe_3_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 4.000000
+Best 1 fitness: 4.000000
+Best 2 fitness: 4.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 5.000000
+Time: 0.000000
+Kernel Time: 0.000440
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 7.050615 
+Total time  = 7.21014
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_4_Cluster0_pt1/Fgf8_9_exe_4_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 1 0 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 3.000000
+Best 4 fitness: 4.000000
+Time: 0.000000
+Kernel Time: 0.000444
+Fitness - exe 0 : 4
+Fitness - exe 1 : 4
+Fitness - exe 2 : 4
+Fitness - exe 3 : 4
+Fitness - exe 4 : 4
+Evol time: 7.157079 
+Total time  = 7.31575
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_4_Cluster0_pt1/Pax6_10_exe_4_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 1 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 4.000000
+Best 1 fitness: 5.000000
+Best 2 fitness: 4.000000
+Best 3 fitness: 4.000000
+Best 4 fitness: 4.000000
+Time: 0.000000
+Kernel Time: 0.000460
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 7.272661 
+Total time  = 7.43806
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_4_Cluster0_pt1/Sp8_11_exe_4_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 4.000000
+Best 1 fitness: 4.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 4.000000
+Best 4 fitness: 3.000000
+Time: 0.000000
+Kernel Time: 0.000452
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 7.613130 
+Total time  = 7.77894
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_5_Cluster0_pt1/Fgf8_12_exe_5_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Fgf8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 1 0 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 3.000000
+Best 3 fitness: 4.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000448
+Fitness - exe 0 : 4
+Fitness - exe 1 : 4
+Fitness - exe 2 : 4
+Fitness - exe 3 : 4
+Fitness - exe 4 : 4
+Evol time: 7.643824 
+Total time  = 7.8113
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_5_Cluster0_pt1/Pax6_13_exe_5_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Pax6_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 0 
+1 - 0 0 1 | 0 
+2 - 0 1 1 | 1 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 4.000000
+Best 1 fitness: 3.000000
+Best 2 fitness: 4.000000
+Best 3 fitness: 4.000000
+Best 4 fitness: 4.000000
+Time: 0.000000
+Kernel Time: 0.000445
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 7.730241 
+Total time  = 7.89434
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_5_Cluster0_pt1/Sp8_14_exe_5_Cluster0_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster0/truth_tables_pt1/Sp8_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 1 0 1 | 1 
+1 - 0 0 1 | 1 
+2 - 0 1 1 | 0 
+3 - 0 1 0 | 0 
+4 - 1 0 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 3.000000
+Best 1 fitness: 4.000000
+Best 2 fitness: 4.000000
+Best 3 fitness: 5.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000447
+Fitness - exe 0 : 5
+Fitness - exe 1 : 5
+Fitness - exe 2 : 5
+Fitness - exe 3 : 5
+Fitness - exe 4 : 5
+Evol time: 7.765494 
+Total time  = 7.92371
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_1_Cluster1_pt1/Coup_0_exe_1_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 1 
+1 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000438
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 11.668529 
+Total time  = 11.8351
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_1_Cluster1_pt1/Emx2_1_exe_1_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 0 
+1 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 1.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000465
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 9.560689 
+Total time  = 9.71794
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_2_Cluster1_pt1/Coup_2_exe_2_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 1 
+1 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 1.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000439
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 10.985681 
+Total time  = 11.149
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_2_Cluster1_pt1/Emx2_3_exe_2_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 0 
+1 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000474
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 10.367994 
+Total time  = 10.5271
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_3_Cluster1_pt1/Coup_4_exe_3_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 1 
+1 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000448
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 12.326275 
+Total time  = 12.4873
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_3_Cluster1_pt1/Emx2_5_exe_3_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 0 
+1 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000455
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 9.956978 
+Total time  = 10.1158
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_4_Cluster1_pt1/Coup_6_exe_4_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 1 
+1 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000467
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 11.272385 
+Total time  = 11.4313
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_4_Cluster1_pt1/Emx2_7_exe_4_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 0 
+1 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000455
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 9.960103 
+Total time  = 10.1274
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_5_Cluster1_pt1/Coup_8_exe_5_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Coup_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 1 
+1 - 1 0 | 1 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000450
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 11.760088 
+Total time  = 11.9176
+Todos os recursos CUDA foram liberados.
+./executions_parallel/exe_5_Cluster1_pt1/Emx2_9_exe_5_Cluster1_pt1.txt
+Lendo Dados Arquivo... kmeans/Cluster1/truth_tables_pt1/Emx2_mCAD.txt
+-----------------PRINT DATASET-------------------
+Dataset:
+0 - 0 0 | 0 
+1 - 1 0 | 0 
+-----------------PRINT DATASET-------------------
+=== Dispositivo CUDA Selecionado ===
+Nome: NVIDIA GeForce RTX 5070
+Capacidade de Computacao: 12.0
+Max Threads por Bloco: 1024
+Memoria Global Total: 11773 MB
+Memoria Compartilhada por Bloco: 48 KB
+Tamanho de Registro por Bloco: 65536
+Tamanho do Warp: 32
+	Tamanho da estrutura Node: 32
+	Tamanho da estrutura CompactNode: 16
+	Tamanho da estrutura Chromosome: 18016
+	Tamanho da estrutura CompactChromosome: 9008
+Alocando memoria na GPU (CUDA)...
+Configurando Threads (blockSize) e Blocos (gridSize) para CUDA...
+Enviando constantes dinamicas para a memoria __constant__ da GPU...
+Transpondo dados...
+Generation 0:
+Best 0 fitness: 2.000000
+Best 1 fitness: 2.000000
+Best 2 fitness: 2.000000
+Best 3 fitness: 2.000000
+Best 4 fitness: 2.000000
+Time: 0.000000
+Kernel Time: 0.000461
+Fitness - exe 0 : 2
+Fitness - exe 1 : 2
+Fitness - exe 2 : 2
+Fitness - exe 3 : 2
+Fitness - exe 4 : 2
+Evol time: 10.440374 
+Total time  = 10.6016
+Todos os recursos CUDA foram liberados.
+Elapsed time: 0.612648830998296
+End of spline step.
+Processing spline data...
+Current pseudotime:  pt0
+Starting clustering step for pseudotime pt0
+Starting KMeans Clustering...
+Calculating the best number of clusters...
+Best number of clusters:  2
+Predicting the labels for n_clusters = 2
+Generating files for cluster  0
+Generating files for cluster  1
+KMeans successfully performed.
+End clustering step for pseudotime pt0
+Discretizing data using BiKMeans for pseudotime pt0
+DISCRETIZATION
+não eh full TT
+BiKMeans sucessfully performed.
+Discretizing data for cluster 0
+Discretizing data for cluster 1
+Data discretization successfully performed.
+Generating truth tables...
+TRANSITIONS: 
+['00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '01', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10', '00', '10']
+DICT TRANSITIONS
+{'00': ['01', '01', '01', '01', '01', '01', '01', '01', '01', '01', '01', '01', '01', '01', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10', '10'], '01': ['00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00'], '10': ['00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00']}
+Solving ambiguous transitions...
+AQUI
+3
+{'00': '10', '01': '00', '10': '00'}
+['101', '000']
+Generating truth tables...
+['00', '01', '10']
+0.0%
+50.0%
+100%
+Final memory usage:  203.62890625
+End
+Total elapsed time: 0.00661204700008966
+TRANSITIONS: 
+['000', '001', '011', '111']
+DICT TRANSITIONS
+{'000': ['001'], '001': ['011'], '011': ['111']}
+Solving ambiguous transitions...
+AQUI
+3
+{'000': '001', '001': '011', '011': '111'}
+['000', '011', '111']
+Generating truth tables...
+['000', '001', '011']
+0.0%
+33.33%
+66.67%
+100%
+Final memory usage:  203.62890625
+End
+Total elapsed time: 0.006556812999406247
+Generating bash scripts...
+Current pseudotime:  pt1
+Starting clustering step for pseudotime pt1
+Starting KMeans Clustering...
+Calculating the best number of clusters...
+Best number of clusters:  2
+Predicting the labels for n_clusters = 2
+Generating files for cluster  0
+Generating files for cluster  1
+KMeans successfully performed.
+End clustering step for pseudotime pt1
+Discretizing data using BiKMeans for pseudotime pt1
+DISCRETIZATION
+não eh full TT
+BiKMeans sucessfully performed.
+Discretizing data for cluster 0
+Discretizing data for cluster 1
+Data discretization successfully performed.
+Generating truth tables...
+TRANSITIONS: 
+['101', '001', '101', '001', '101', '001', '101', '001', '101', '001', '101', '001', '101', '001', '011', '010', '100', '010', '000']
+DICT TRANSITIONS
+{'101': ['001', '001', '001', '001', '001', '001', '001'], '001': ['101', '101', '101', '101', '101', '101', '011'], '011': ['010'], '010': ['100', '000'], '100': ['010']}
+Solving ambiguous transitions...
+AQUI
+5
+{'101': '001', '001': '101', '011': '010', '010': '900', '100': '010'}
+['01091', '00100', '11000']
+Generating truth tables...
+['101', '001', '011', '010', '100']
+0.0%
+33.33%
+66.67%
+100%
+Final memory usage:  203.9453125
+End
+Total elapsed time: 0.005919447999986005
+TRANSITIONS: 
+['00', '10', '11']
+DICT TRANSITIONS
+{'00': ['10'], '10': ['11']}
+Solving ambiguous transitions...
+AQUI
+2
+{'00': '10', '10': '11'}
+['11', '00']
+Generating truth tables...
+['00', '10']
+0.0%
+50.0%
+100%
+Final memory usage:  203.9453125
+End
+Total elapsed time: 0.005723440001020208
+Generating bash scripts...
+Namespace(clusterMethod='KMeans', n_clusters='4', correlation_threshold='None', expressionDataFile='ExpressionData.csv', pseudotimeFile='PseudoTime.csv', problemName='mCAD', suffix='500cells', discretizationApproach='BiKMeans', independentRuns=5, fullDiscretization=False, argSplineFile='None', splineList=False, runCGP=True, keepData=False, fullTT=False, generateSplineList=False, cgpNodes='None', cgpGens='None', useCUDA=True)

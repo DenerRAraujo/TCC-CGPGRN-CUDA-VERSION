@@ -1,0 +1,7 @@
+timeIter: 	43.2329
+timeIterTotal: 	43.2477
+timeKernel: 	4.4923
+
+
+Total time: 	43.4047
+

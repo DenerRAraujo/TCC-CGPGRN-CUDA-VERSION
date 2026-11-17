@@ -1,0 +1,7 @@
+teste: 1 de 5
+expressao: /home/Dener/Downloads/TCC Claude/TCC Claude/Bases/GSD_ExpressionData.csv
+pseudotempo: /home/Dener/Downloads/TCC Claude/TCC Claude/Bases/GSD_PseudoTime.csv
+comando: python CGPGRN.py -e ExpressionData.csv -p PseudoTime.csv -cm KMeans -nc 10 -pn GSD -s 500cells -d BiKMeans -r 5 -run
+inicio: 2026-11-13 19:41:29
+duracao: 00h35m36s
+status: OK

@@ -1,0 +1,29 @@
+Node45 5 10 15
+Node55 2 8 15
+Node65 45 45 14
+Node290 55 65 11
+Output 290
+
+
+Node144 17 13 17
+Output 144
+
+
+Node24 12 16 11
+Node61 6 17 16
+Node64 61 24 15
+Output 64
+
+
+Node45 19 15 17
+Node145 45 8 12
+Node293 19 145 11
+Output 293
+
+
+Node20 2 10 11
+Node51 13 14 12
+Node198 51 20 11
+Output 198
+
+

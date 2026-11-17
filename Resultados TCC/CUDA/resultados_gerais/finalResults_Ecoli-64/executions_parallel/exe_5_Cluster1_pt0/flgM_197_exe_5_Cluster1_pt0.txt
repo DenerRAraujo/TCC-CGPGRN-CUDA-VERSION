@@ -1,0 +1,20 @@
+Node52 2 19 12
+Output 52
+
+
+Node45 38 5 12
+Output 45
+
+
+Node79 28 23 11
+Output 79
+
+
+Node68 23 4 12
+Output 68
+
+
+Node52 41 22 10
+Output 52
+
+

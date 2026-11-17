@@ -1,0 +1,22 @@
+Node7 1 0 14
+Node44 7 7 16
+Output 44
+
+
+Node2 1 0 12
+Output 2
+
+
+Node3 0 1 11
+Output 3
+
+
+Node2 1 1 12
+Node24 2 2 10
+Output 24
+
+
+Node4 0 0 12
+Output 4
+
+

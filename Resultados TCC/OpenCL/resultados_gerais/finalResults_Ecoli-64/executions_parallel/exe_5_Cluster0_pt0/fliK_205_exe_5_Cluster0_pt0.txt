@@ -1,0 +1,38 @@
+Node79 30 26 17
+Node168 79 19 12
+Node351 168 32 15
+Output 351
+
+
+Node48 6 20 12
+Node70 10 48 14
+Node112 19 14 17
+Node190 70 32 15
+Node285 112 190 10
+Node328 36 285 12
+Output 328
+
+
+Node99 19 23 16
+Node155 11 32 15
+Node190 7 155 16
+Node475 99 190 15
+Output 475
+
+
+Node54 37 38 14
+Node98 11 54 17
+Node120 98 13 11
+Node280 120 32 15
+Output 280
+
+
+Node47 25 23 16
+Node50 44 5 17
+Node71 11 32 15
+Node136 47 27 15
+Node150 136 50 15
+Node229 71 150 12
+Output 229
+
+
