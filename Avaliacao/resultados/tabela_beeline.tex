@@ -1,0 +1,24 @@
+\begin{table}[htb]
+    \centering
+    \caption{Métricas do BEELINE para as redes inferidas pelas versões OpenCL
+    e CUDA nos problemas com base de expressão completa. Com mais de uma
+    repetição, os valores são média $\pm$ desvio padrão amostral.}
+    \label{tab:beeline}
+    \begin{tabular}{l l c c c c}
+        \hline
+        Problema & Versão & Rep. & AUROC & AUPRC & EP \\
+        \hline
+        mCAD & OpenCL & 3 & 0,368 $\pm$ 0,000 & 0,629 $\pm$ 0,000 & 0,500 $\pm$ 0,000 \\
+         & CUDA & 3 & 0,368 $\pm$ 0,000 & 0,629 $\pm$ 0,000 & 0,500 $\pm$ 0,000 \\
+        \hline
+        GSD & OpenCL & 3 & 0,599 $\pm$ 0,022 & 0,378 $\pm$ 0,018 & 0,360 $\pm$ 0,035 \\
+         & CUDA & 3 & 0,587 $\pm$ 0,013 & 0,366 $\pm$ 0,023 & 0,332 $\pm$ 0,011 \\
+        \hline
+        Ecoli-32 & OpenCL & 1 & 0,563 & 0,057 & 0,058 \\
+         & CUDA & 1 & 0,563 & 0,057 & 0,058 \\
+        \hline
+        Ecoli-64 & OpenCL & 1 & 0,569 & 0,055 & 0,049 \\
+         & CUDA & 1 & 0,591 & 0,062 & 0,058 \\
+        \hline
+    \end{tabular}
+\end{table}
